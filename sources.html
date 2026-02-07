@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrekReel Custom Data Sources | 自定义数据源</title>
+  <meta name="description" content="TrekReel 用户自定义数据源说明（含商用收费源示例）" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-name">TrekReel</div>
+      </div>
+      <nav class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <a href="mailto:zikedece@proton.me">Email</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-title">
+        <h1>Custom Data Sources / 自定义数据源</h1>
+        <p>
+          本页面用于说明高级数据源的手动添加方式。
+          以下商用或受限源已从默认选项移除，仅供用户自行评估与手动配置。
+        </p>
+      </section>
+
+      <div class="notice">
+        ⚠️ 版权与许可提醒：请在使用前确认对应数据源的商业授权、归属声明和使用限制。
+      </div>
+
+      <section class="section">
+        <h2>How To Add / 添加方法</h2>
+        <ol>
+          <li>打开 App：设置 → 数据源。</li>
+          <li>选择卫星影像中的“自定义瓦片源”。</li>
+          <li>粘贴 URL 模板并保存应用。</li>
+          <li>如服务方要求 Key 或签名，请按其官方文档配置。</li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <h2>Template Placeholders / URL 占位符</h2>
+        <ul>
+          <li><code>{z}</code>：缩放级别</li>
+          <li><code>{x}</code>：瓦片 X 坐标</li>
+          <li><code>{y}</code>：瓦片 Y 坐标</li>
+          <li><code>{quadkey}</code>：Bing 专用编码</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Removed Commercial/Restricted Sources / 已移除商用或受限数据源</h2>
+
+        <article class="source-item">
+          <h3>Sentinel-2 Cloudless 2024 (License to be confirmed)</h3>
+          <pre>https://a.tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2024_3857/default/GoogleMapsCompatible/{z}/{y}/{x}.jpg</pre>
+          <p>EOX 2024 版本，许可证范围需再次确认。</p>
+        </article>
+
+        <article class="source-item">
+          <h3>ArcGIS World Imagery (Commercial)</h3>
+          <pre>https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}</pre>
+          <p>Esri 高清影像，商业使用通常需授权。</p>
+        </article>
+
+        <article class="source-item">
+          <h3>Google Satellite (Commercial)</h3>
+          <pre>https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}</pre>
+          <p>Google 影像需遵循其平台条款，不应未经授权直接商用。</p>
+        </article>
+
+        <article class="source-item">
+          <h3>Bing Aerial (Commercial)</h3>
+          <pre>https://ecn.t0.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=1</pre>
+          <p>Bing 使用 quadkey 编码，商业场景请确认许可方案。</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Default Free Source / 默认免费源</h2>
+        <article class="source-item">
+          <h3>Sentinel-2 Cloudless 2016 (CC BY 4.0)</h3>
+          <pre>https://a.tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/GoogleMapsCompatible/{z}/{y}/{x}.jpg</pre>
+          <p>需按 CC BY 4.0 做归属声明：Sentinel-2 cloudless by EOX.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="./index.html">Home</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./sources.html">Custom Sources</a>
+        <a href="./terms.html">Terms</a>
+        <a href="https://github.com/hooosberg/TrekReel" target="_blank" rel="noreferrer noopener">GitHub</a>
+      </div>
+      <div>Source guide updated: 2026-02-07</div>
+    </footer>
+  </div>
+</body>
+</html>
