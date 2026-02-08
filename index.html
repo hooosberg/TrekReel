@@ -1,26 +1,36 @@
 <!doctype html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TrekReel | 3D 户外轨迹故事</title>
-  <meta name="description" content="TrekReel 官方主页：3D 户外轨迹故事应用，包含隐私声明、联系方式与自定义数据源说明。" />
+  <title>TrekReel | 3D Storytelling for Outdoor Adventures</title>
+  <meta name="description"
+    content="TrekReel helps you turn your GPX tracks into cinematic 3D stories. Perfect for hikers, cyclists, and explorers." />
   <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
   <div class="site-shell">
     <header class="topbar">
       <div class="brand">
-        <div class="brand-mark" aria-hidden="true"></div>
-        <div class="brand-name">TrekReel</div>
+        <a href="./index.html" class="brand-link">
+          <img src="./img/logo.png" alt="TrekReel Logo" class="brand-logo">
+          <div class="brand-name">
+            <span class="language-block is-visible" data-lang="zh">途影 TrekReel</span>
+            <span class="language-block" data-lang="en">TrekReel</span>
+          </div>
+        </a>
       </div>
       <nav class="nav-links">
-        <a href="./support.html">Support / 支持</a>
-        <a href="./privacy.html">Privacy / 隐私</a>
-        <a href="./sources.html">Custom Sources / 自定义数据源</a>
-        <a href="./terms.html">Terms / 条款</a>
-        <a href="https://github.com/hooosberg/TrekReel" target="_blank" rel="noreferrer noopener">GitHub</a>
-        <a href="mailto:zikedece@proton.me">Email</a>
+        <a href="./index.html" class="is-active">
+          <span class="language-block is-visible" data-lang="zh">首页</span>
+          <span class="language-block" data-lang="en">Home</span>
+        </a>
+        <a href="./support.html">
+          <span class="language-block is-visible" data-lang="zh">支持</span>
+          <span class="language-block" data-lang="en">Support</span>
+        </a>
         <div class="lang-switch" role="group" aria-label="Language Switch">
           <button type="button" data-lang-target="zh" class="is-active">中文</button>
           <button type="button" data-lang-target="en">EN</button>
@@ -29,116 +39,209 @@
     </header>
 
     <main>
+      <!-- Hero Section -->
       <section class="hero">
+        <div class="hero-content center-text">
+          <div class="language-block is-visible" data-lang="zh">
+            <h1 class="hero-title">把每一次户外轨迹<br>变成可分享的 3D 故事</h1>
+            <p class="hero-subtitle">
+              专为徒步、越野、骑行设计。导入 GPX，一键生成 3D 路线动画。
+            </p>
+            <div class="cta-row center-row">
+              <a class="btn btn-primary btn-large btn-disabled" href="#" aria-disabled="true">下载应用 (Mac) <span
+                  class="btn-tag">即将推出</span></a>
+              <a class="btn btn-secondary btn-large" href="./support.html">查看教程</a>
+            </div>
+          </div>
+          <div class="language-block" data-lang="en">
+            <h1 class="hero-title">Turn Every Outdoor Route<br>Into a Shareable 3D Story</h1>
+            <p class="hero-subtitle">
+              Built for hikers, runners, and cyclists. Import GPX, create cinematic 3D videos instantly.
+            </p>
+            <div class="cta-row center-row">
+              <a class="btn btn-primary btn-large btn-disabled" href="#" aria-disabled="true">Download for Mac <span
+                  class="btn-tag">Coming Soon</span></a>
+              <a class="btn btn-secondary btn-large" href="./support.html">View Tutorial</a>
+            </div>
+          </div>
+        </div>
+        <!-- Feature Carousel -->
+        <div class="hero-carousel-container">
+          <div class="carousel-track">
+            <!-- Slide 1: Route Animation -->
+            <div class="carousel-slide is-active">
+              <img src="./img/feature_route.png" alt="Route Animation Interface" class="carousel-image">
+              <div class="carousel-caption">
+                <div class="language-block is-visible" data-lang="zh">
+                  <h3>像地图 PPT 一样简单</h3>
+                  <p>无需复杂操作，导入 GPX 自动生成三维地形。支持框选或手绘路线，快速呈现户外规划。</p>
+                </div>
+                <div class="language-block" data-lang="en">
+                  <h3>As Simple as a Map PPT</h3>
+                  <p>Auto-generate 3D terrain from GPX. Draw routes manually or import to visualize plans instantly.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2: Marker Annotation -->
+            <div class="carousel-slide">
+              <img src="./img/feature_marker.png" alt="Marker Annotation Interface" class="carousel-image">
+              <div class="carousel-caption">
+                <div class="language-block is-visible" data-lang="zh">
+                  <h3>丰富的信息标注</h3>
+                  <p>在关键位置添加标记与注释。结合地形起伏，直观展示营地、水源与风险点。</p>
+                </div>
+                <div class="language-block" data-lang="en">
+                  <h3>Rich Annotations</h3>
+                  <p>Add markers at key spots. Visualize camps, water sources, and risks with terrain context.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-nav">
+            <button class="nav-btn prev" aria-label="Previous Slide">❮</button>
+            <div class="nav-dots">
+              <span class="dot is-active" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+            </div>
+            <button class="nav-btn next" aria-label="Next Slide">❯</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Grid -->
+      <section class="grid-content">
+        <article class="card feature-card">
+          <div class="feature-icon">🏔️</div>
+          <div class="language-block is-visible" data-lang="zh">
+            <h3>3D 地形可视化</h3>
+            <p>基于真实高程数据，还原山川起伏。支持卫星影像与户外等高线地图叠加。</p>
+          </div>
+          <div class="language-block" data-lang="en">
+            <h3>3D Terrain Viz</h3>
+            <p>Real elevation data meets satellite imagery. visualize your path with depth.</p>
+          </div>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-icon">📍</div>
+          <div class="language-block is-visible" data-lang="zh">
+            <h3>轨迹故事化</h3>
+            <p>不仅仅是回放。添加关键帧、照片标记和注释，讲述路上的故事。</p>
+          </div>
+          <div class="language-block" data-lang="en">
+            <h3>Route Storytelling</h3>
+            <p>More than playback. Add keyframes, photo markers, and notes to tell the story.</p>
+          </div>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-icon">🎬</div>
+          <div class="language-block is-visible" data-lang="zh">
+            <h3>电影级运镜</h3>
+            <p>平滑的相机运动插值工具，让你的路线视频像电影一样流畅自然。</p>
+          </div>
+          <div class="language-block" data-lang="en">
+            <h3>Cinematic Camera</h3>
+            <p>Smooth camera interpolation tools make your route videos look like movies.</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Privacy & Offline Notice -->
+      <section class="section-notice center-text">
         <div class="language-block is-visible" data-lang="zh">
-          <h1>把每一次户外轨迹，变成可分享的 3D 故事</h1>
-          <p>
-            TrekReel 是一个面向徒步、越野、骑行和探险用户的 3D 轨迹故事应用。
-            你可以导入轨迹、编辑镜头、叠加地形与影像，生成更有叙事感的路线回放。
-          </p>
+          <h2>隐私优先，离线可用</h2>
+          <p>途影是一款本地优先的应用。你的轨迹数据只保存在你的设备上，我们不上传、不收集。支持离线缓存地图，无网环境也能创作。</p>
         </div>
         <div class="language-block" data-lang="en">
-          <h1>Turn Every Outdoor Route Into a Shareable 3D Story</h1>
-          <p>
-            TrekReel is a 3D storytelling app for hiking, trail running, cycling, and expedition use cases.
-            Import tracks, shape camera moves, combine terrain and imagery, and present your route as a clear narrative.
-          </p>
-        </div>
-        <div class="cta-row">
-          <a class="btn btn-primary btn-disabled" href="#" aria-disabled="true">App Store Download (Coming Soon)</a>
-          <a class="btn btn-outline" href="./privacy.html">Privacy Policy / 隐私声明</a>
-          <a class="btn btn-outline" href="./sources.html">Advanced Sources / 高级数据源</a>
+          <h2>Privacy First, Offline Ready</h2>
+          <p>TrekReel is local-first. Your tracks stay on your device. We don't collect data. Offline map caching
+            supported.</p>
         </div>
       </section>
 
-      <section class="grid" aria-label="Product Highlights">
-        <article class="card">
-          <h2>中文介绍</h2>
-          <p>专为户外内容创作设计：从 GPX 轨迹到 3D 路线演示，突出地形、路线、节奏与故事表达。</p>
-          <ul>
-            <li>离线缓存与本地处理优先</li>
-            <li>支持多种地图图层与自定义源</li>
-            <li>适配徒步复盘、路线分享、活动展示</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h2>English Summary</h2>
-          <p>Built for outdoor storytelling workflows: from GPX tracks to cinematic 3D route playback with terrain context.</p>
-          <ul>
-            <li>Local-first data flow and offline-friendly usage</li>
-            <li>Multiple layers with advanced custom source options</li>
-            <li>Great for trip reports, route reviews, and event recaps</li>
-          </ul>
-        </article>
-      </section>
-
-      <section class="section" id="quick-start">
-        <h2>使用说明 / Quick Start</h2>
-        <ul>
-          <li>导入轨迹文件（如 GPX / KML），选择地图图层与视角。</li>
-          <li>调整故事时间线、镜头运动和关键节点。</li>
-          <li>导出或分享你的路线故事。</li>
-          <li>如需更高级影像源或商用源，请使用「自定义数据源」页面手动配置。</li>
-        </ul>
-      </section>
-
-      <section class="section" id="contact">
-        <h2>联系与支持 / Contact</h2>
-        <ul class="meta-list">
-          <li><strong>Email:</strong> <a href="mailto:zikedece@proton.me">zikedece@proton.me</a></li>
-          <li><strong>Support:</strong> <a href="./support.html">./support.html</a></li>
-          <li><strong>GitHub:</strong> <a href="https://github.com/hooosberg/TrekReel" target="_blank" rel="noreferrer noopener">https://github.com/hooosberg/TrekReel</a></li>
-          <li><strong>Privacy:</strong> <a href="./privacy.html">./privacy.html</a></li>
-        </ul>
-      </section>
-
-      <div class="notice">
-        商用地图与影像数据通常涉及授权限制。请在使用前自行确认数据源许可证与归属要求。
-      </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="footer-links">
-        <a href="./index.html">Home</a>
-        <a href="./support.html">Support</a>
-        <a href="./privacy.html">Privacy Policy</a>
-        <a href="./sources.html">Custom Sources</a>
-        <a href="./terms.html">Terms</a>
-        <a href="mailto:zikedece@proton.me">Contact Email</a>
-        <a href="https://github.com/hooosberg/TrekReel" target="_blank" rel="noreferrer noopener">GitHub Repo</a>
+    <!-- More Projects Section -->
+    <section class="more-projects">
+      <div class="section-title center-text">
+        <div class="language-block is-visible" data-lang="zh">
+          <h2>更多作品</h2>
+          <p>来自同一开发者的其他创意工具</p>
+        </div>
+        <div class="language-block" data-lang="en">
+          <h2>More Projects</h2>
+          <p>Other creative tools from the same developer</p>
+        </div>
       </div>
-      <div>© 2026 TrekReel. All rights reserved.</div>
+
+      <div class="projects-grid">
+        <a href="https://hooosberg.github.io/WitNote/" target="_blank" class="project-item">
+          <img src="./img/witnote.png" alt="WitNote Logo" class="project-icon">
+          <span class="project-name">WitNote</span>
+        </a>
+
+        <a href="https://hooosberg.github.io/GlotShot/" target="_blank" class="project-item">
+          <img src="./img/glotshot.png" alt="GlotShot Logo" class="project-icon">
+          <span class="project-name">GlotShot</span>
+        </a>
+
+        <a href="https://uixskills.com/" target="_blank" class="project-item">
+          <img src="./img/uixskills.png" alt="UIX Skills Logo" class="project-icon">
+          <span class="project-name">UIX Skills</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>
+            <span class="language-block is-visible" data-lang="zh">途影 TrekReel</span>
+            <span class="language-block" data-lang="en">TrekReel</span>
+          </h4>
+          <a href="./index.html">
+            <span class="language-block is-visible" data-lang="zh">首页</span>
+            <span class="language-block" data-lang="en">Home</span>
+          </a>
+          <a href="./support.html">
+            <span class="language-block is-visible" data-lang="zh">支持中心</span>
+            <span class="language-block" data-lang="en">Support</span>
+          </a>
+        </div>
+        <div class="footer-section">
+          <h4>
+            <span class="language-block is-visible" data-lang="zh">联系我们</span>
+            <span class="language-block" data-lang="en">Connect</span>
+          </h4>
+          <a href="mailto:zikedece@proton.me">Email</a>
+          <a href="https://github.com/hooosberg/TrekReel" target="_blank" rel="noreferrer noopener">GitHub</a>
+        </div>
+        <div class="footer-section">
+          <h4>
+            <span class="language-block is-visible" data-lang="zh">法律信息</span>
+            <span class="language-block" data-lang="en">Legal</span>
+          </h4>
+          <a href="./privacy.html">
+            <span class="language-block is-visible" data-lang="zh">隐私政策</span>
+            <span class="language-block" data-lang="en">Privacy Policy</span>
+          </a>
+          <a href="./terms.html">
+            <span class="language-block is-visible" data-lang="zh">服务条款</span>
+            <span class="language-block" data-lang="en">Terms of Service</span>
+          </a>
+          <a href="./sources.html">
+            <span class="language-block is-visible" data-lang="zh">数据源致谢</span>
+            <span class="language-block" data-lang="en">Credits</span>
+          </a>
+        </div>
+      </div>
+      <div class="copyright">© 2026 TrekReel. All rights reserved.</div>
     </footer>
   </div>
 
-  <script>
-    (function () {
-      const buttons = document.querySelectorAll('[data-lang-target]');
-      const blocks = document.querySelectorAll('.language-block[data-lang]');
-      const KEY = 'trekreel-site-lang';
-
-      function applyLang(lang) {
-        blocks.forEach((block) => {
-          block.classList.toggle('is-visible', block.getAttribute('data-lang') === lang);
-        });
-        buttons.forEach((btn) => {
-          btn.classList.toggle('is-active', btn.getAttribute('data-lang-target') === lang);
-        });
-        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-      }
-
-      buttons.forEach((btn) => {
-        btn.addEventListener('click', () => {
-          const lang = btn.getAttribute('data-lang-target') || 'zh';
-          localStorage.setItem(KEY, lang);
-          applyLang(lang);
-        });
-      });
-
-      const saved = localStorage.getItem(KEY);
-      applyLang(saved === 'en' ? 'en' : 'zh');
-    })();
-  </script>
+  <script src="./script.js"></script>
 </body>
+
 </html>

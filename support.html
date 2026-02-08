@@ -1,70 +1,456 @@
 <!doctype html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TrekReel Support | 支持中心</title>
-  <meta name="description" content="TrekReel 支持中心：联系方式、常见问题与问题反馈入口。" />
+  <title>TrekReel Support | 使用指南与帮助</title>
+  <meta name="description" content="途影官方支持中心：新手入门教程、键盘快捷键列表、常见问题解答与联系方式。" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
   <div class="site-shell">
     <header class="topbar">
       <div class="brand">
-        <div class="brand-mark" aria-hidden="true"></div>
-        <div class="brand-name">TrekReel</div>
+        <a href="./index.html" class="brand-link">
+          <img src="./img/logo.png" alt="TrekReel Logo" class="brand-logo">
+          <div class="brand-name">
+            <span class="language-block is-visible" data-lang="zh">途影 TrekReel</span>
+            <span class="language-block" data-lang="en">TrekReel</span>
+          </div>
+        </a>
       </div>
       <nav class="nav-links">
-        <a href="./index.html">Home</a>
-        <a href="./privacy.html">Privacy</a>
-        <a href="./sources.html">Custom Sources</a>
-        <a href="./terms.html">Terms</a>
-        <a href="mailto:zikedece@proton.me">Email</a>
+        <a href="./index.html">
+          <span class="language-block is-visible" data-lang="zh">首页</span>
+          <span class="language-block" data-lang="en">Home</span>
+        </a>
+        <a href="./support.html" class="is-active">
+          <span class="language-block is-visible" data-lang="zh">支持</span>
+          <span class="language-block" data-lang="en">Support</span>
+        </a>
+        <div class="lang-switch" role="group" aria-label="Language Switch">
+          <button type="button" data-lang-target="zh" class="is-active">中文</button>
+          <button type="button" data-lang-target="en">EN</button>
+        </div>
       </nav>
     </header>
 
     <main>
-      <section class="page-title">
-        <h1>Support Center / 支持中心</h1>
-        <p>Last updated: 2026-02-07</p>
+      <section class="page-title center-text">
+        <div class="language-block is-visible" data-lang="zh">
+          <h1>使用指南与支持</h1>
+          <p class="subtitle">无论是刚刚入门还是寻求进阶技巧，这里有你想要的一切。</p>
+        </div>
+        <div class="language-block" data-lang="en">
+          <h1>Support & Guide</h1>
+          <p class="subtitle">Whether you're just starting out or looking for advanced tips, find everything here.</p>
+        </div>
       </section>
 
-      <section class="policy-section">
-        <h2>Contact / 联系方式</h2>
-        <p>Email: <a href="mailto:zikedece@proton.me">zikedece@proton.me</a></p>
-        <p>GitHub: <a href="https://github.com/hooosberg/TrekReel" target="_blank" rel="noreferrer noopener">https://github.com/hooosberg/TrekReel</a></p>
+      <div class="grid-content" style="margin-bottom: 40px;">
+        <!-- Quick Start Guide -->
+        <section class="card full-width" id="quick-start">
+          <div class="language-block is-visible" data-lang="zh">
+            <h2>🚀 快速入门：5步制作你的路线故事</h2>
+            <div class="steps-container">
+              <div class="step-item">
+                <span class="step-num">1</span>
+                <h3>导入轨迹</h3>
+                <p>点击左上角「导入」按钮或直接拖入 GPX/KML/GeoJSON 文件。途影会自动识别并在 3D 地图中加载你的路线。</p>
+              </div>
+              <div class="step-item">
+                <span class="step-num">2</span>
+                <h3>选择风格</h3>
+                <p>在右侧面板切换地图图层（卫星图/户外图/暗色模式），并调整光照与天空气氛，设定故事基调。</p>
+              </div>
+              <div class="step-item">
+                <span class="step-num">3</span>
+                <h3>设定运镜</h3>
+                <p>使用鼠标或快捷键浏览地图。在关键位置（如山顶、营地）点击「添加关键帧」，创建平滑的相机运动路径。</p>
+              </div>
+              <div class="step-item">
+                <span class="step-num">4</span>
+                <h3>添加标记</h3>
+                <p>双击路线任意位置添加 POI 标记，上传照片或输入文字，通过标注丰富故事细节。</p>
+              </div>
+              <div class="step-item">
+                <span class="step-num">5</span>
+                <h3>预览导出</h3>
+                <p>按下空格键预览动画。满意后点击顶部「导出视频」，选择分辨率与帧率，生成你的路书视频。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="language-block" data-lang="en">
+            <h2>🚀 Quick Start: Create Your Story in 5 Steps</h2>
+            <div class="steps-container">
+              <div class="step-item">
+                <span class="step-num">1</span>
+                <h3>Import Track</h3>
+                <p>Click "Import" or drag & drop GPX/KML/GeoJSON files. TrekReel automatically visualizes your route in
+                  3D.</p>
+              </div>
+              <div class="step-item">
+                <span class="step-num">2</span>
+                <h3>Choose Style</h3>
+                <p>Switch map layers (Satellite/Outdoor/Dark) and adjust lighting/atmosphere to set the tone.</p>
+              </div>
+              <div class="step-item">
+                <span class="step-num">3</span>
+                <h3>Set Camera</h3>
+                <p>Navigate the map. Click "Add Keyframe" at key spots (summits, camps) to create smooth camera paths.
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-num">4</span>
+                <h3>Add Markers</h3>
+                <p>Double-click the route to add POI markers. Upload photos or text to enrich details.</p>
+              </div>
+              <div class="step-item">
+                <span class="step-num">5</span>
+                <h3>Export</h3>
+                <p>Press Space to preview. Click "Export Video" to generate your route movie.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Shortcuts -->
+        <section class="card" id="shortcuts">
+          <div class="language-block is-visible" data-lang="zh">
+            <h2>⌨️ 常用快捷键</h2>
+            <table class="shortcuts-table">
+              <tr>
+                <th>功能</th>
+                <th>按键</th>
+              </tr>
+              <tr>
+                <td>播放 / 暂停</td>
+                <td><kbd>Space</kbd></td>
+              </tr>
+              <tr>
+                <td>撤销 (Undo)</td>
+                <td><kbd>Cmd</kbd> + <kbd>Z</kbd></td>
+              </tr>
+              <tr>
+                <td>重做 (Redo)</td>
+                <td><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd></td>
+              </tr>
+              <tr>
+                <td>保存项目</td>
+                <td><kbd>Cmd</kbd> + <kbd>S</kbd></td>
+              </tr>
+              <tr>
+                <td>全屏模式</td>
+                <td><kbd>F</kbd></td>
+              </tr>
+              <tr>
+                <td>聚焦选中对象</td>
+                <td><kbd>.</kbd> (Period)</td>
+              </tr>
+              <tr>
+                <td>删除选中对象</td>
+                <td><kbd>Delete</kbd> / <kbd>Backspace</kbd></td>
+              </tr>
+              <tr>
+                <td>切换 2D/3D 视角</td>
+                <td><kbd>T</kbd></td>
+              </tr>
+              <tr>
+                <td>旋转视角</td>
+                <td><kbd>Shift</kbd> + 拖拽 / <kbd>右键</kbd> 拖拽</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="language-block" data-lang="en">
+            <h2>⌨️ Keyboard Shortcuts</h2>
+            <table class="shortcuts-table">
+              <tr>
+                <th>Action</th>
+                <th>Key</th>
+              </tr>
+              <tr>
+                <td>Play / Pause</td>
+                <td><kbd>Space</kbd></td>
+              </tr>
+              <tr>
+                <td>Undo</td>
+                <td><kbd>Cmd</kbd> + <kbd>Z</kbd></td>
+              </tr>
+              <tr>
+                <td>Redo</td>
+                <td><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd></td>
+              </tr>
+              <tr>
+                <td>Save Project</td>
+                <td><kbd>Cmd</kbd> + <kbd>S</kbd></td>
+              </tr>
+              <tr>
+                <td>Fullscreen</td>
+                <td><kbd>F</kbd></td>
+              </tr>
+              <tr>
+                <td>Focus Selection</td>
+                <td><kbd>.</kbd> (Period)</td>
+              </tr>
+              <tr>
+                <td>Delete Selection</td>
+                <td><kbd>Delete</kbd> / <kbd>Backspace</kbd></td>
+              </tr>
+              <tr>
+                <td>Toggle 2D/3D</td>
+                <td><kbd>T</kbd></td>
+              </tr>
+              <tr>
+                <td>Rotate View</td>
+                <td><kbd>Shift</kbd> + Drag / <kbd>Right Click</kbd></td>
+              </tr>
+            </table>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="card" id="faq">
+          <div class="language-block is-visible" data-lang="zh">
+            <h2>❓ 常见问题</h2>
+            <details>
+              <summary>为什么导出视频失败？</summary>
+              <p>请确保您的项目至少包含 2 个关键帧以形成动画。另外，请检查导出路径是否有写入权限。</p>
+            </details>
+            <details>
+              <summary>如何加载自定义地图源？</summary>
+              <p>访问 <a href="./sources.html">自定义数据源</a> 页面查看支持的格式。你需要 TileJSON 或 XYZ URL。</p>
+            </details>
+            <details>
+              <summary>支持哪些轨迹文件格式？</summary>
+              <p>目前完美支持标准的 GPX、KML、GeoJSON 和 FIT 文件。</p>
+            </details>
+            <details>
+              <summary>如果应用窗口找不到了怎么办？</summary>
+              <p>点击 Dock 栏图标或使用菜单栏 <code>Window -> Show Main Window</code> 即可找回。</p>
+            </details>
+          </div>
+
+          <div class="language-block" data-lang="en">
+            <h2>❓ FAQ</h2>
+            <details>
+              <summary>Why did video export fail?</summary>
+              <p>Ensure your project has at least 2 keyframes. Also verify write permissions for the destination folder.
+              </p>
+            </details>
+            <details>
+              <summary>How to add custom map sources?</summary>
+              <p>Visit the <a href="./sources.html">Custom Sources</a> page. You need a valid TileJSON or XYZ URL.</p>
+            </details>
+            <details>
+              <summary>Supported file formats?</summary>
+              <p>Standard GPX, KML, GeoJSON, and FIT files are fully supported.</p>
+            </details>
+            <details>
+              <summary>Window disappeared?</summary>
+              <p>Click the Dock icon or use menu <code>Window -> Show Main Window</code>.</p>
+            </details>
+          </div>
+        </section>
+
+        <!-- Custom Data Sources -->
+        <section class="card" id="custom-sources">
+          <div class="language-block is-visible" data-lang="zh">
+            <h2>🌍 自定义数据源</h2>
+            <p class="subtitle">高级功能：如何添加第三方瓦片服务</p>
+
+            <div class="policy-section"
+              style="background: rgba(255, 193, 7, 0.1); padding: 16px; border-radius: 8px; border: 1px solid rgba(255, 193, 7, 0.3); margin-bottom: 20px;">
+              <p style="margin: 0; color: #856404; font-size: 14px;">
+                <strong>⚠️ 版权提醒：</strong> 请确保您拥中所添加数据源的商业授权或使用许可。
+              </p>
+            </div>
+
+            <h3>如何添加</h3>
+            <ol style="padding-left: 20px; margin-bottom: 24px;">
+              <li>打开 App 设置 → <strong>数据源</strong></li>
+              <li>在卫星影像下方选择 <strong>自定义瓦片源</strong></li>
+              <li>粘贴标准的 XYZ URL 模板并保存</li>
+            </ol>
+
+            <h3>URL 占位符支持</h3>
+            <ul style="padding-left: 20px; font-family: monospace; font-size: 13px;">
+              <li>{z} : 缩放级别</li>
+              <li>{x} : 瓦片 X 坐标</li>
+              <li>{y} : 瓦片 Y 坐标</li>
+              <li>{quadkey} : Bing 风格四叉树键值</li>
+            </ul>
+          </div>
+
+          <div class="language-block" data-lang="en">
+            <h2>🌍 Custom Data Sources</h2>
+            <p class="subtitle">Advanced: Adding third-party tile services</p>
+
+            <div class="policy-section"
+              style="background: rgba(255, 193, 7, 0.1); padding: 16px; border-radius: 8px; border: 1px solid rgba(255, 193, 7, 0.3); margin-bottom: 20px;">
+              <p style="margin: 0; color: #856404; font-size: 14px;">
+                <strong>⚠️ License Warning:</strong> Ensure you have the right to use the data sources you add.
+              </p>
+            </div>
+
+            <h3>How to Add</h3>
+            <ol style="padding-left: 20px; margin-bottom: 24px;">
+              <li>Go to App Settings → <strong>Data Sources</strong></li>
+              <li>Select <strong>Custom Tile Source</strong> under Satellite Imagery</li>
+              <li>Paste a standard XYZ URL template and save</li>
+            </ol>
+
+            <h3>Supported Placeholders</h3>
+            <ul style="padding-left: 20px; font-family: monospace; font-size: 13px;">
+              <li>{z} : Zoom Level</li>
+              <li>{x} : Tile X Coordinate</li>
+              <li>{y} : Tile Y Coordinate</li>
+              <li>{quadkey} : Bing-style Quadkey</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- Other Data Sources -->
+      <section class="card" id="other-sources">
+        <div class="language-block is-visible" data-lang="zh">
+          <details class="removed-sources">
+            <summary>
+              其他数据源
+            </summary>
+            <div style="font-size: 13px; color: var(--text-secondary);">
+              <p style="margin-bottom: 12px; padding: 12px; background: #f5f5f7; border-radius: 6px;">
+                <strong>注意：</strong> 下列链接仅供参考。请严格遵守相关法律法规及服务条款使用。商业用途通常需要单独授权。
+              </p>
+
+              <div class="source-item" style="margin-bottom: 16px;">
+                <h4 style="margin: 0 0 4px 0; color: var(--text-primary);">Sentinel-2 Cloudless 2024</h4>
+                <code
+                  style="display: block; background: #f5f5f7; padding: 8px; border-radius: 4px; word-break: break-all; user-select: all;">https://a.tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2024_3857/default/GoogleMapsCompatible/{z}/{y}/{x}.jpg</code>
+                <div style="margin-top: 4px; opacity: 0.8;">EOX 2024 版本，许可证范围需再次确认。</div>
+              </div>
+
+              <div class="source-item" style="margin-bottom: 16px;">
+                <h4 style="margin: 0 0 4px 0; color: var(--text-primary);">ArcGIS World Imagery (Commercial)</h4>
+                <code
+                  style="display: block; background: #f5f5f7; padding: 8px; border-radius: 4px; word-break: break-all; user-select: all;">https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}</code>
+                <div style="margin-top: 4px; opacity: 0.8;">Esri 高清影像，商业使用通常需授权。</div>
+              </div>
+
+              <div class="source-item" style="margin-bottom: 16px;">
+                <h4 style="margin: 0 0 4px 0; color: var(--text-primary);">Google Satellite (Commercial)</h4>
+                <code
+                  style="display: block; background: #f5f5f7; padding: 8px; border-radius: 4px; word-break: break-all; user-select: all;">https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}</code>
+                <div style="margin-top: 4px; opacity: 0.8;">Google 影像需遵循其平台条款。</div>
+              </div>
+
+              <div class="source-item">
+                <h4 style="margin: 0 0 4px 0; color: var(--text-primary);">Bing Aerial (Commercial)</h4>
+                <code
+                  style="display: block; background: #f5f5f7; padding: 8px; border-radius: 4px; word-break: break-all; user-select: all;">https://ecn.t0.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=1</code>
+                <div style="margin-top: 4px; opacity: 0.8;">Bing 使用 quadkey 编码，商业场景请确认许可。</div>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div class="language-block" data-lang="en">
+          <details class="removed-sources">
+            <summary>
+              Other Data Sources
+            </summary>
+            <div style="font-size: 13px; color: var(--text-secondary);">
+              <p style="margin-bottom: 12px; padding: 12px; background: #f5f5f7; border-radius: 6px;">
+                <strong>Note:</strong> The following links are for reference only. Please strict compliance with
+                relevant laws and service terms. Commercial use typically requires separate authorization.
+              </p>
+
+              <div class="source-item" style="margin-bottom: 16px;">
+                <h4 style="margin: 0 0 4px 0; color: var(--text-primary);">Sentinel-2 Cloudless 2024</h4>
+                <code
+                  style="display: block; background: #f5f5f7; padding: 8px; border-radius: 4px; word-break: break-all; user-select: all;">https://a.tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2024_3857/default/GoogleMapsCompatible/{z}/{y}/{x}.jpg</code>
+                <div style="margin-top: 4px; opacity: 0.8;">EOX 2024 Version. License scope to be confirmed.</div>
+              </div>
+
+              <div class="source-item" style="margin-bottom: 16px;">
+                <h4 style="margin: 0 0 4px 0; color: var(--text-primary);">ArcGIS World Imagery (Commercial)</h4>
+                <code
+                  style="display: block; background: #f5f5f7; padding: 8px; border-radius: 4px; word-break: break-all; user-select: all;">https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}</code>
+                <div style="margin-top: 4px; opacity: 0.8;">Esri High-Res Imagery. Commercial use requires
+                  authorization.</div>
+              </div>
+
+              <div class="source-item" style="margin-bottom: 16px;">
+                <h4 style="margin: 0 0 4px 0; color: var(--text-primary);">Google Satellite (Commercial)</h4>
+                <code
+                  style="display: block; background: #f5f5f7; padding: 8px; border-radius: 4px; word-break: break-all; user-select: all;">https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}</code>
+                <div style="margin-top: 4px; opacity: 0.8;">Must follow Google Maps Platform terms.</div>
+              </div>
+
+              <div class="source-item">
+                <h4 style="margin: 0 0 4px 0; color: var(--text-primary);">Bing Aerial (Commercial)</h4>
+                <code
+                  style="display: block; background: #f5f5f7; padding: 8px; border-radius: 4px; word-break: break-all; user-select: all;">https://ecn.t0.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=1</code>
+                <div style="margin-top: 4px; opacity: 0.8;">Uses Quadkey. Check commercial license.</div>
+              </div>
+            </div>
+          </details>
+        </div>
       </section>
 
-      <section class="policy-section">
-        <h2>FAQ / 常见问题</h2>
-        <p><strong>Q:</strong> Why is export unavailable?</p>
-        <p><strong>A:</strong> Ensure your project has at least two frames and verify write permission in the save dialog.</p>
-        <p><strong>Q:</strong> Why can’t I see the window after closing it?</p>
-        <p><strong>A:</strong> Use Dock icon click or menu <code>Window -> Show Main Window</code> to reopen it.</p>
-      </section>
-
-      <section class="policy-section">
-        <h2>Issue Report Template / 问题反馈模板</h2>
-        <p>When reporting issues, include:</p>
-        <ul>
-          <li>App version and macOS version</li>
-          <li>Exact action steps to reproduce</li>
-          <li>Error message screenshot</li>
-          <li>Relevant log snippet (if available)</li>
-        </ul>
-      </section>
     </main>
 
     <footer class="site-footer">
-      <div class="footer-links">
-        <a href="./index.html">Home</a>
-        <a href="./support.html">Support</a>
-        <a href="./privacy.html">Privacy</a>
-        <a href="./sources.html">Custom Sources</a>
-        <a href="./terms.html">Terms</a>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>
+            <span class="language-block is-visible" data-lang="zh">途影 TrekReel</span>
+            <span class="language-block" data-lang="en">TrekReel</span>
+          </h4>
+          <a href="./index.html">
+            <span class="language-block is-visible" data-lang="zh">首页</span>
+            <span class="language-block" data-lang="en">Home</span>
+          </a>
+          <a href="./support.html">
+            <span class="language-block is-visible" data-lang="zh">支持中心</span>
+            <span class="language-block" data-lang="en">Support</span>
+          </a>
+        </div>
+        <div class="footer-section">
+          <h4>
+            <span class="language-block is-visible" data-lang="zh">联系我们</span>
+            <span class="language-block" data-lang="en">Connect</span>
+          </h4>
+          <a href="mailto:zikedece@proton.me">Email</a>
+          <a href="https://github.com/hooosberg/TrekReel" target="_blank" rel="noreferrer noopener">GitHub</a>
+        </div>
+        <div class="footer-section">
+          <h4>
+            <span class="language-block is-visible" data-lang="zh">法律信息</span>
+            <span class="language-block" data-lang="en">Legal</span>
+          </h4>
+          <a href="./privacy.html">
+            <span class="language-block is-visible" data-lang="zh">隐私政策</span>
+            <span class="language-block" data-lang="en">Privacy Policy</span>
+          </a>
+          <a href="./terms.html">
+            <span class="language-block is-visible" data-lang="zh">服务条款</span>
+            <span class="language-block" data-lang="en">Terms of Service</span>
+          </a>
+          <a href="./sources.html">
+            <span class="language-block is-visible" data-lang="zh">数据源致谢</span>
+            <span class="language-block" data-lang="en">Credits</span>
+          </a>
+        </div>
       </div>
-      <div>© 2026 TrekReel</div>
+      <div class="copyright">© 2026 TrekReel. All rights reserved.</div>
     </footer>
   </div>
+
+  <script src="./script.js"></script>
 </body>
+
 </html>
