@@ -620,21 +620,108 @@ a[href*="uixskills.com"] .project-icon {
   grid-column: 1 / -1;
 }
 
-/* Language Switcher */
-.lang-switch button {
-  background: none;
-  border: none;
-  color: var(--text-secondary);
-  font-size: 13px;
-  cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 4px;
+/* Language Dropdown */
+.lang-dropdown {
+  position: relative;
 }
 
-.lang-switch button.is-active {
-  color: var(--text-primary);
-  font-weight: 600;
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.lang-toggle:hover,
+.lang-dropdown.is-open .lang-toggle {
   background: rgba(0, 0, 0, 0.05);
+  color: var(--text-primary);
+}
+
+.lang-icon {
+  opacity: 0.8;
+}
+
+.current-lang-label {
+  margin: 0 2px;
+}
+
+.chevron-icon {
+  opacity: 0.6;
+  transition: transform 0.2s;
+}
+
+.lang-dropdown.is-open .chevron-icon {
+  transform: rotate(180deg);
+}
+
+.lang-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  padding: 8px;
+  display: none;
+  flex-direction: column;
+  min-width: 160px;
+  z-index: 1000;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.lang-dropdown.is-open .lang-menu {
+  display: flex;
+  animation: menuFadeIn 0.2s ease-out;
+}
+
+@keyframes menuFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lang-menu button {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--text-primary);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.1s;
+  white-space: nowrap;
+}
+
+.lang-menu button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.lang-menu button.is-active {
+  font-weight: 500;
+  color: var(--accent-color);
+  background: rgba(0, 122, 255, 0.1);
 }
 
 /* Responsive */
@@ -647,13 +734,10 @@ a[href*="uixskills.com"] .project-icon {
     grid-template-columns: 1fr;
   }
 
-  .nav-links a {
-    display: none;
-  }
-
-  /* Simplified mobile nav */
-  .nav-links .lang-switch {
-    display: flex;
+  /* Keep lang dropdown accessible on mobile */
+  .lang-menu {
+    right: -20px;
+    /* Adjust for edge padding if needed */
   }
 }
 

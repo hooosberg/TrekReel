@@ -2,40 +2,152 @@
     const buttons = document.querySelectorAll('[data-lang-target]');
     const blocks = document.querySelectorAll('.language-block[data-lang]');
     const KEY = 'trekreel-site-lang';
+    const SUPPORTED_LANGS = ['zh', 'en', 'es', 'fr', 'de', 'it', 'pt', 'ja', 'ko', 'ru', 'ar', 'hi'];
+    const HTML_LANG_MAP = {
+        zh: 'zh-CN',
+        en: 'en',
+        es: 'es',
+        fr: 'fr',
+        de: 'de',
+        it: 'it',
+        pt: 'pt-BR',
+        ja: 'ja',
+        ko: 'ko',
+        ru: 'ru',
+        ar: 'ar',
+        hi: 'hi',
+    };
+
+    function normalizeLang(lang) {
+        if (SUPPORTED_LANGS.includes(lang)) return lang;
+        return 'zh';
+    }
+
+    function detectBrowserLang() {
+        const locale = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        if (locale.startsWith('zh')) return 'zh';
+        if (locale.startsWith('es')) return 'es';
+        if (locale.startsWith('fr')) return 'fr';
+        if (locale.startsWith('de')) return 'de';
+        if (locale.startsWith('it')) return 'it';
+        if (locale.startsWith('pt')) return 'pt';
+        if (locale.startsWith('ja')) return 'ja';
+        if (locale.startsWith('ko')) return 'ko';
+        if (locale.startsWith('ru')) return 'ru';
+        if (locale.startsWith('ar')) return 'ar';
+        if (locale.startsWith('hi')) return 'hi';
+        return 'en';
+    }
+
+    function getLocalizedText(entries, lang) {
+        for (const entry of entries) {
+            const block = document.querySelector(`${entry.block}[data-lang="${lang}"]`)
+                || document.querySelector(`${entry.block}[data-lang="en"]`)
+                || document.querySelector(`${entry.block}[data-lang="zh"]`);
+            if (!block) continue;
+
+            const node = entry.text ? block.querySelector(entry.text) : block;
+            if (!node) continue;
+
+            const text = node.textContent?.replace(/\s+/g, ' ').trim();
+            if (text) return text;
+        }
+        return '';
+    }
+
+    function updatePageMeta(lang) {
+        const titleText = getLocalizedText([
+            { block: '.page-header .language-block', text: 'h1' },
+            { block: '.page-title .language-block', text: 'h1' },
+            { block: '.hero-content .language-block', text: '.hero-title' },
+        ], lang);
+
+        const descText = getLocalizedText([
+            { block: '.page-header .language-block', text: 'p' },
+            { block: '.page-title .language-block', text: 'p' },
+            { block: '.hero-content .language-block', text: '.hero-subtitle' },
+        ], lang);
+
+        if (titleText) {
+            document.title = titleText.includes('TrekReel')
+                ? titleText
+                : `TrekReel | ${titleText}`;
+        }
+
+        if (descText) {
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) metaDesc.setAttribute('content', descText);
+        }
+    }
+
+    // Dropdown Elements
+    const langDropdown = document.querySelector('.lang-dropdown');
+    const langToggle = document.querySelector('.lang-toggle');
+    const currentLangLabel = document.querySelector('.current-lang-label');
 
     // Apply language selection
     function applyLang(lang) {
+        const normalized = normalizeLang(lang);
         // Toggle visibility of content blocks
         blocks.forEach(block => {
-            const isVisible = block.getAttribute('data-lang') === lang;
+            const isVisible = block.getAttribute('data-lang') === normalized;
             block.classList.toggle('is-visible', isVisible);
         });
 
         // Toggle active state of buttons
         buttons.forEach(btn => {
-            const isActive = btn.getAttribute('data-lang-target') === lang;
-            btn.classList.toggle('is-active', isActive);
+            const isTarget = btn.getAttribute('data-lang-target') === normalized;
+            btn.classList.toggle('is-active', isTarget);
+
+            // Update dropdown label if this is the active button
+            if (isTarget && currentLangLabel) {
+                currentLangLabel.textContent = btn.textContent;
+            }
         });
 
         // Update HTML lang attribute
-        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+        document.documentElement.lang = HTML_LANG_MAP[normalized] || 'en';
+        updatePageMeta(normalized);
+
+        // Close dropdown
+        if (langDropdown) {
+            langDropdown.classList.remove('is-open');
+            if (langToggle) langToggle.setAttribute('aria-expanded', 'false');
+        }
     }
 
     // Event Listeners
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
-            const lang = btn.getAttribute('data-lang-target') || 'zh';
+            const lang = normalizeLang(btn.getAttribute('data-lang-target') || 'zh');
             localStorage.setItem(KEY, lang);
             applyLang(lang);
         });
     });
 
+    // Dropdown Toggle Logic
+    if (langToggle && langDropdown) {
+        langToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = langDropdown.classList.contains('is-open');
+            langDropdown.classList.toggle('is-open', !isOpen);
+            langToggle.setAttribute('aria-expanded', !isOpen);
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!langDropdown.contains(e.target)) {
+                langDropdown.classList.remove('is-open');
+                langToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
     // Initialization
     // Check local storage or browser preference
-    let saved = localStorage.getItem(KEY);
+    const stored = localStorage.getItem(KEY);
+    let saved = SUPPORTED_LANGS.includes(stored) ? stored : null;
     if (!saved) {
-        const browserLang = navigator.language || navigator.userLanguage;
-        saved = browserLang.startsWith('zh') ? 'zh' : 'en';
+        saved = detectBrowserLang();
     }
     applyLang(saved);
 
