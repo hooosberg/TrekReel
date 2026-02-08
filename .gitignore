@@ -1,0 +1,11 @@
+# Ignore everything first
+/*
+
+# Whitelist specific files and directories
+!/.gitignore
+!/README.md
+!/index.html
+!/privacy.html
+!/sources.html
+!/styles.css
+!/terms.html
