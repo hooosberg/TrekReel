@@ -5,6 +5,7 @@ This folder contains the public website files only.
 ## Files
 
 - `index.html`
+- `support.html`
 - `privacy.html`
 - `sources.html`
 - `terms.html`
