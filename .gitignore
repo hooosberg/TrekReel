@@ -1,18 +1,2 @@
-# Ignore everything first
-/*
-
-# Whitelist specific files and directories
-!/.gitignore
-!/.nojekyll
-!/README.md
-!/index.html
-!/privacy.html
-!/sources.html
-!/styles.css
-!/script.js
-!/terms.html
-!/support.html
-
-# Whitelist directories
-!/img/
-!/Apple/
+.DS_Store
+gh-pages-site/**/.DS_Store
