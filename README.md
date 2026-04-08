@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./gh-pages-site/img/logo.png" alt="TrekReel Logo" width="120" height="120">
+  <img src="./img/logo.png" alt="TrekReel Logo" width="120" height="120">
 </p>
 
 <h1 align="center">TrekReel | 途影</h1>

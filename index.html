@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrekReel | 3D Storytelling for Outdoor Adventures</title>
+  <meta name="description"
+    content="Download TrekReel from the Mac App Store or GitHub Releases and turn GPX tracks into cinematic 3D route stories." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="brand">
+        <a href="./index.html" class="brand-link">
+          <img src="./img/logo.png" alt="TrekReel Logo" class="brand-logo">
+          <div class="brand-name">
+            <span class="language-block is-visible" data-lang="zh">途影 TrekReel</span>
+            <span class="language-block" data-lang="en">TrekReel</span>
+            <span class="language-block" data-lang="es">TrekReel</span>
+            <span class="language-block" data-lang="fr">TrekReel</span>
+            <span class="language-block" data-lang="de">TrekReel</span>
+            <span class="language-block" data-lang="it">TrekReel</span>
+            <span class="language-block" data-lang="pt">TrekReel</span>
+            <span class="language-block" data-lang="ja">トレックリール</span>
+            <span class="language-block" data-lang="ko">트렉릴</span>
+            <span class="language-block" data-lang="ru">ТрекРил</span>
+            <span class="language-block" data-lang="ar">تريكريل</span>
+            <span class="language-block" data-lang="hi">ट्रेकरील</span>
+          </div>
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="./index.html" class="is-active">
+          <span class="language-block is-visible" data-lang="zh">首页</span>
+          <span class="language-block" data-lang="en">Home</span>
+          <span class="language-block" data-lang="es">Inicio</span>
+          <span class="language-block" data-lang="fr">Accueil</span>
+          <span class="language-block" data-lang="de">Zuhause</span>
+          <span class="language-block" data-lang="it">Casa</span>
+          <span class="language-block" data-lang="pt">Página inicial</span>
+          <span class="language-block" data-lang="ja">ホーム</span>
+          <span class="language-block" data-lang="ko">홈</span>
+          <span class="language-block" data-lang="ru">Главная</span>
+          <span class="language-block" data-lang="ar">الصفحة الرئيسية</span>
+          <span class="language-block" data-lang="hi">घर</span>
+        </a>
+        <a href="./support.html">
+          <span class="language-block is-visible" data-lang="zh">支持</span>
+          <span class="language-block" data-lang="en">Support</span>
+          <span class="language-block" data-lang="es">Soporte</span>
+          <span class="language-block" data-lang="fr">Assistance</span>
+          <span class="language-block" data-lang="de">Unterstützung</span>
+          <span class="language-block" data-lang="it">Supporto</span>
+          <span class="language-block" data-lang="pt">Suporte</span>
+          <span class="language-block" data-lang="ja">サポート</span>
+          <span class="language-block" data-lang="ko">지원</span>
+          <span class="language-block" data-lang="ru">Поддержка</span>
+          <span class="language-block" data-lang="ar">الدعم</span>
+          <span class="language-block" data-lang="hi">समर्थन</span>
+        </a>
+        <div class="lang-dropdown">
+          <button type="button" class="lang-toggle" aria-expanded="false" aria-label="Select Language">
+            <svg class="lang-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
+            </svg>
+            <span class="current-lang-label">Language</span>
+            <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="lang-menu">
+            <button type="button" data-lang-target="zh">中文</button>
+            <button type="button" data-lang-target="en">English</button>
+            <button type="button" data-lang-target="es">Español</button>
+            <button type="button" data-lang-target="fr">Français</button>
+            <button type="button" data-lang-target="de">Deutsch</button>
+            <button type="button" data-lang-target="it">Italiano</button>
+            <button type="button" data-lang-target="pt">Português</button>
+            <button type="button" data-lang-target="ja">日本語</button>
+            <button type="button" data-lang-target="ko">한국어</button>
+            <button type="button" data-lang-target="ru">Русский</button>
+            <button type="button" data-lang-target="ar">العربية</button>
+            <button type="button" data-lang-target="hi">हिन्दी</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content center-text">
+          <div class="language-block is-visible" data-lang="zh">
+            <h1 class="hero-title">把每一次户外轨迹<br>变成可分享的 3D 故事</h1>
+            <p class="hero-subtitle">
+              专为徒步、越野、骑行设计。导入 GPX，一键生成 3D 路线动画。
+            </p>
+            <div class="cta-row center-row">
+              <a class="btn btn-store btn-large" href="https://apps.apple.com/us/app/trekreel-3d-map-video-maker/id6758914035?mt=12"
+                target="_blank" rel="noreferrer noopener">App Store 下载</a>
+              <a class="btn btn-release btn-large" href="https://github.com/hooosberg/TrekReel/releases"
+                target="_blank" rel="noreferrer noopener">GitHub 下载</a>
+            </div>
+            <a class="hero-support-link" href="./support.html">查看教程</a>
+          </div>
+          <div class="language-block" data-lang="en">
+            <h1 class="hero-title">Turn Every Outdoor Route<br>Into a Shareable 3D Story</h1>
+            <p class="hero-subtitle">
+              Built for hikers, runners, and cyclists. Import GPX, create cinematic 3D videos instantly.
+            </p>
+            <div class="cta-row center-row">
+              <a class="btn btn-store btn-large" href="https://apps.apple.com/us/app/trekreel-3d-map-video-maker/id6758914035?mt=12"
+                target="_blank" rel="noreferrer noopener">Download on App Store</a>
+              <a class="btn btn-release btn-large" href="https://github.com/hooosberg/TrekReel/releases"
+                target="_blank" rel="noreferrer noopener">Download on GitHub</a>
+            </div>
+            <a class="hero-support-link" href="./support.html">View Tutorial</a>
+          </div>
+          <div class="language-block" data-lang="es">
+            <h1 class="hero-title">Gira cada ruta al aire libre<br>En una historia 3D compartible</h1>
+            <p class="hero-subtitle">
+              Diseñado para excursionistas, corredores y ciclistas. Importe GPX, cree videos cinematográficos en 3D al
+              instante.
+            </p>
+            <div class="cta-row center-row">
+              <a class="btn btn-store btn-large" href="https://apps.apple.com/us/app/trekreel-3d-map-video-maker/id6758914035?mt=12"
+                target="_blank" rel="noreferrer noopener">Descargar en App Store</a>
+              <a class="btn btn-release btn-large" href="https://github.com/hooosberg/TrekReel/releases"
+                target="_blank" rel="noreferrer noopener">Descargar en GitHub</a>
+            </div>
+            <a class="hero-support-link" href="./support.html">Ver tutorial</a>
+          </div>
+          <div class="language-block" data-lang="fr">
+            <h1 class="hero-title">Transformez chaque itinéraire extérieur<br>Dans une histoire 3D partageable</h1>
+            <p class="hero-subtitle">
+              Conçu pour les randonneurs, les coureurs et les cyclistes. Importez GPX, créez instantanément des vidéos
+              cinématographiques 3D.
+            </p>
+            <div class="cta-row center-row">
+              <a class="btn btn-store btn-large" href="https://apps.apple.com/us/app/trekreel-3d-map-video-maker/id6758914035?mt=12"
+                target="_blank" rel="noreferrer noopener">Télécharger sur App Store</a>
+              <a class="btn btn-release btn-large" href="https://github.com/hooosberg/TrekReel/releases"
+                target="_blank" rel="noreferrer noopener">Télécharger sur GitHub</a>
+            </div>
+            <a class="hero-support-link" href="./support.html">Voir le didacticiel</a>
+          </div>
+          <div class="language-block" data-lang="de">
+            <h1 class="hero-title">Drehen Sie jede Outdoor-Route<br>In eine teilbare 3D-Geschichte</h1>
+            <p class="hero-subtitle">
+              Gebaut für Wanderer, Läufer und Radfahrer. Importieren Sie GPX und erstellen Sie sofort filmische
+              3D-Videos.
+            </p>
+            <div class="cta-row center-row">
+              <a class="btn btn-store btn-large" href="https://apps.apple.com/us/app/trekreel-3d-map-video-maker/id6758914035?mt=12"
+                target="_blank" rel="noreferrer noopener">Im App Store laden</a>
+              <a class="btn btn-release btn-large" href="https://github.com/hooosberg/TrekReel/releases"
+                target="_blank" rel="noreferrer noopener">Bei GitHub laden</a>
+            </div>
+            <a class="hero-support-link" href="./support.html">Tutorial ansehen</a>
+          </div>
+          <div class="language-block" data-lang="it">
+            <h1 class="hero-title">Svolta ogni percorso esterno<br>In una storia 3D condivisibile</h1>
+            <p class="hero-subtitle">
+              Costruito per escursionisti, corridori e ciclisti. Importa GPX, crea istantaneamente video 3D
+              cinematografici.
+            </p>
+            <div class="cta-row center-row">
+              <a class="btn btn-store btn-large" href="https://apps.apple.com/us/app/trekreel-3d-map-video-maker/id6758914035?mt=12"
+                target="_blank" rel="noreferrer noopener">Scarica da App Store</a>
+              <a class="btn btn-release btn-large" href="https://github.com/hooosberg/TrekReel/releases"
+                target="_blank" rel="noreferrer noopener">Scarica da GitHub</a>
+            </div>
+            <a class="hero-support-link" href="./support.html">Visualizza l'esercitazione</a>
+          </div>
+          <div class="language-block" data-lang="pt">
+            <h1 class="hero-title">Vire todas as rotas ao ar livre<br>Em uma história 3D compartilhável</h1>
+            <p class="hero-subtitle">
+              Construído para caminhantes, corredores e ciclistas. Importe GPX e crie vídeos 3D cinematográficos
+              instantaneamente.
+            </p>
+            <div class="cta-row center-row">
+              <a class="btn btn-store btn-large" href="https://apps.apple.com/us/app/trekreel-3d-map-video-maker/id6758914035?mt=12"
+                target="_blank" rel="noreferrer noopener">Baixar na App Store</a>
+              <a class="btn btn-release btn-large" href="https://github.com/hooosberg/TrekReel/releases"
+                target="_blank" rel="noreferrer noopener">Baixar no GitHub</a>
+            </div>
+            <a class="hero-support-link" href="./support.html">Ver tutorial</a>
+          </div>
+          <div class="language-block" data-lang="ja">
+            <h1 class="hero-title">あらゆる屋外ルートを曲がる<br>共有可能な 3D ストーリーへ</h1>
+            <p class="hero-subtitle">
+              ハイカー、ランナー、サイクリストのために作られています。 GPX をインポートし、映画のような 3D ビデオを即座に作成します。
+            </p>
+            <div class="cta-row center-row">
+              <a class="btn btn-store btn-large" href="https://apps.apple.com/us/app/trekreel-3d-map-video-maker/id6758914035?mt=12"
+                target="_blank" rel="noreferrer noopener">App Store で入手</a>
+              <a class="btn btn-release btn-large" href="https://github.com/hooosberg/TrekReel/releases"
+                target="_blank" rel="noreferrer noopener">GitHub から入手</a>
+            </div>
+            <a class="hero-support-link" href="./support.html">チュートリアルを見る</a>
+          </div>
+          <div class="language-block" data-lang="ko">
+            <h1 class="hero-title">모든 야외 경로를 우회하세요<br>공유 가능한 3D 스토리 속으로</h1>
+            <p class="hero-subtitle">
+              등산객, 달리기 선수, 자전거 타는 사람을 위해 제작되었습니다. GPX를 가져와서 영화 같은 3D 비디오를 즉시 제작하세요.
+            </p>
+            <div class="cta-row center-row">
+              <a class="btn btn-store btn-large" href="https://apps.apple.com/us/app/trekreel-3d-map-video-maker/id6758914035?mt=12"
+                target="_blank" rel="noreferrer noopener">App Store에서 다운로드</a>
+              <a class="btn btn-release btn-large" href="https://github.com/hooosberg/TrekReel/releases"
+                target="_blank" rel="noreferrer noopener">GitHub에서 다운로드</a>
+            </div>
+            <a class="hero-support-link" href="./support.html">튜토리얼 보기</a>
+          </div>
+          <div class="language-block" data-lang="ru">
+            <h1 class="hero-title">Поверните каждый открытый маршрут<br>В общую 3D-историю</h1>
+            <p class="hero-subtitle">
+              Создан для туристов, бегунов и велосипедистов. Импортируйте GPX и мгновенно создавайте кинематографические
+              3D-видео.
+            </p>
+            <div class="cta-row center-row">
+              <a class="btn btn-store btn-large" href="https://apps.apple.com/us/app/trekreel-3d-map-video-maker/id6758914035?mt=12"
+                target="_blank" rel="noreferrer noopener">Скачать в App Store</a>
+              <a class="btn btn-release btn-large" href="https://github.com/hooosberg/TrekReel/releases"
+                target="_blank" rel="noreferrer noopener">Скачать на GitHub</a>
+            </div>
+            <a class="hero-support-link" href="./support.html">Посмотреть руководство</a>
+          </div>
+          <div class="language-block" data-lang="ar">
+            <h1 class="hero-title">اتجه إلى كل طريق خارجي<br>في قصة ثلاثية الأبعاد قابلة للمشاركة</h1>
+            <p class="hero-subtitle">
+              مصممة للمتنزهين والعدائين وراكبي الدراجات. قم باستيراد GPX وإنشاء مقاطع فيديو سينمائية ثلاثية الأبعاد على
+              الفور.
+            </p>
+            <div class="cta-row center-row">
+              <a class="btn btn-store btn-large" href="https://apps.apple.com/us/app/trekreel-3d-map-video-maker/id6758914035?mt=12"
+                target="_blank" rel="noreferrer noopener">التنزيل من App Store</a>
+              <a class="btn btn-release btn-large" href="https://github.com/hooosberg/TrekReel/releases"
+                target="_blank" rel="noreferrer noopener">التنزيل من GitHub</a>
+            </div>
+            <a class="hero-support-link" href="./support.html">عرض البرنامج التعليمي</a>
+          </div>
+          <div class="language-block" data-lang="hi">
+            <h1 class="hero-title">प्रत्येक बाहरी मार्ग को मोड़ें<br>एक साझा करने योग्य 3डी कहानी में</h1>
+            <p class="hero-subtitle">
+              पैदल यात्रियों, धावकों और साइकिल चालकों के लिए बनाया गया। जीपीएक्स आयात करें, तुरंत सिनेमाई 3डी वीडियो
+              बनाएं।
+            </p>
+            <div class="cta-row center-row">
+              <a class="btn btn-store btn-large" href="https://apps.apple.com/us/app/trekreel-3d-map-video-maker/id6758914035?mt=12"
+                target="_blank" rel="noreferrer noopener">App Store से डाउनलोड करें</a>
+              <a class="btn btn-release btn-large" href="https://github.com/hooosberg/TrekReel/releases"
+                target="_blank" rel="noreferrer noopener">GitHub से डाउनलोड करें</a>
+            </div>
+            <a class="hero-support-link" href="./support.html">ट्यूटोरियल देखें</a>
+          </div>
+        </div>
+        <!-- Feature Carousel -->
+        <div class="hero-carousel-container">
+          <div class="carousel-track">
+            <!-- Slide 1: Route Animation -->
+            <div class="carousel-slide is-active">
+              <img src="./img/feature_route.png" alt="Route Animation Interface" class="carousel-image">
+              <div class="carousel-caption">
+                <div class="language-block is-visible" data-lang="zh">
+                  <h3>像地图 PPT 一样简单</h3>
+                  <p>无需复杂操作，导入 GPX 自动生成三维地形。支持框选或手绘路线，快速呈现户外规划。</p>
+                </div>
+                <div class="language-block" data-lang="en">
+                  <h3>As Simple as a Map PPT</h3>
+                  <p>Auto-generate 3D terrain from GPX. Draw routes manually or import to visualize plans instantly.</p>
+                </div>
+                <div class="language-block" data-lang="es">
+                  <h3>Tan simple como un mapa PPT</h3>
+                  <p>Genera automáticamente terreno 3D desde GPX. Dibuja rutas manualmente o impórtalas para visualizar
+                    planos al instante.</p>
+                </div>
+                <div class="language-block" data-lang="fr">
+                  <h3>Aussi simple qu'une carte PPT</h3>
+                  <p>Générez automatiquement un terrain 3D à partir de GPX. Dessinez des itinéraires manuellement ou
+                    importez-les pour visualiser instantanément les plans.</p>
+                </div>
+                <div class="language-block" data-lang="de">
+                  <h3>So einfach wie eine Karten-PPT</h3>
+                  <p>Generieren Sie automatisch 3D-Gelände aus GPX. Zeichnen Sie Routen manuell oder importieren Sie
+                    sie, um Pläne sofort zu visualisieren.</p>
+                </div>
+                <div class="language-block" data-lang="it">
+                  <h3>Semplice come una mappa PPT</h3>
+                  <p>Genera automaticamente terreno 3D da GPX. Disegna manualmente i percorsi o importali per
+                    visualizzare immediatamente i piani.</p>
+                </div>
+                <div class="language-block" data-lang="pt">
+                  <h3>Tão simples quanto um mapa PPT</h3>
+                  <p>Gere automaticamente terreno 3D a partir do GPX. Desenhe rotas manualmente ou importe para
+                    visualizar planos instantaneamente.</p>
+                </div>
+                <div class="language-block" data-lang="ja">
+                  <h3>地図のようなシンプルな PPT</h3>
+                  <p>GPX から 3D 地形を自動生成します。ルートを手動で描画するか、インポートして計画を即座に視覚化します。</p>
+                </div>
+                <div class="language-block" data-lang="ko">
+                  <h3>지도처럼 간단한 PPT</h3>
+                  <p>GPX에서 3D 지형을 자동 생성합니다. 경로를 수동으로 그리거나 가져와서 즉시 계획을 시각화할 수 있습니다.</p>
+                </div>
+                <div class="language-block" data-lang="ru">
+                  <h3>Просто как карта PPT</h3>
+                  <p>Автоматическое создание 3D-ландшафта из GPX. Рисуйте маршруты вручную или импортируйте их для
+                    мгновенной визуализации планов.</p>
+                </div>
+                <div class="language-block" data-lang="ar">
+                  <h3>بسيطة مثل خريطة PPT</h3>
+                  <p>إنشاء تضاريس ثلاثية الأبعاد تلقائيًا من GPX. ارسم المسارات يدويًا أو قم باستيرادها لتصور الخطط على
+                    الفور.</p>
+                </div>
+                <div class="language-block" data-lang="hi">
+                  <h3>मानचित्र पीपीटी जितना सरल</h3>
+                  <p>जीपीएक्स से 3डी भूभाग स्वतः उत्पन्न करें। योजनाओं को तुरंत देखने के लिए मैन्युअल रूप से मार्ग बनाएं
+                    या आयात करें।</p>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2: Marker Annotation -->
+            <div class="carousel-slide">
+              <img src="./img/feature_marker.png" alt="Marker Annotation Interface" class="carousel-image">
+              <div class="carousel-caption">
+                <div class="language-block is-visible" data-lang="zh">
+                  <h3>丰富的信息标注</h3>
+                  <p>在关键位置添加标记与注释。结合地形起伏，直观展示营地、水源与风险点。</p>
+                </div>
+                <div class="language-block" data-lang="en">
+                  <h3>Rich Annotations</h3>
+                  <p>Add markers at key spots. Visualize camps, water sources, and risks with terrain context.</p>
+                </div>
+                <div class="language-block" data-lang="es">
+                  <h3>Anotaciones ricas</h3>
+                  <p>Agregue marcadores en puntos clave. Visualice campamentos, fuentes de agua y riesgos con el
+                    contexto del terreno.</p>
+                </div>
+                <div class="language-block" data-lang="fr">
+                  <h3>Annotations riches</h3>
+                  <p>Ajoutez des marqueurs aux endroits clés. Visualisez les camps, les sources d'eau et les risques
+                    avec le contexte du terrain.</p>
+                </div>
+                <div class="language-block" data-lang="de">
+                  <h3>Umfangreiche Anmerkungen</h3>
+                  <p>Fügen Sie Markierungen an wichtigen Stellen hinzu. Visualisieren Sie Lager, Wasserquellen und
+                    Risiken im Geländekontext.</p>
+                </div>
+                <div class="language-block" data-lang="it">
+                  <h3>Annotazioni ricche</h3>
+                  <p>Aggiungi marcatori nei punti chiave. Visualizza accampamenti, fonti d'acqua e rischi con il
+                    contesto del terreno.</p>
+                </div>
+                <div class="language-block" data-lang="pt">
+                  <h3>Anotações ricas</h3>
+                  <p>Adicione marcadores em pontos-chave. Visualize acampamentos, fontes de água e riscos com o contexto
+                    do terreno.</p>
+                </div>
+                <div class="language-block" data-lang="ja">
+                  <h3>豊富な注釈</h3>
+                  <p>重要な場所にマーカーを追加します。地形のコンテキストを使用してキャンプ、水源、リスクを視覚化します。</p>
+                </div>
+                <div class="language-block" data-lang="ko">
+                  <h3>풍부한 주석</h3>
+                  <p>주요 지점에 마커를 추가하세요. 지형 상황에 따라 캠프, 수자원 및 위험을 시각화합니다.</p>
+                </div>
+                <div class="language-block" data-lang="ru">
+                  <h3>Богатые аннотации</h3>
+                  <p>Добавьте маркеры в ключевых точках. Визуализируйте лагеря, источники воды и риски в контексте
+                    местности.</p>
+                </div>
+                <div class="language-block" data-lang="ar">
+                  <h3>التعليقات التوضيحية الغنية</h3>
+                  <p>أضف علامات في النقاط الرئيسية. تصور المخيمات ومصادر المياه والمخاطر مع سياق التضاريس.</p>
+                </div>
+                <div class="language-block" data-lang="hi">
+                  <h3>समृद्ध टिप्पणियाँ</h3>
+                  <p>प्रमुख स्थानों पर मार्कर जोड़ें. इलाके के संदर्भ में शिविरों, जल स्रोतों और जोखिमों की कल्पना करें।
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-nav">
+            <button class="nav-btn prev" aria-label="Previous Slide">❮</button>
+            <div class="nav-dots">
+              <span class="dot is-active" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+            </div>
+            <button class="nav-btn next" aria-label="Next Slide">❯</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Grid -->
+      <section class="grid-content">
+        <article class="card feature-card">
+          <div class="feature-icon">🏔️</div>
+          <div class="language-block is-visible" data-lang="zh">
+            <h3>3D 地形可视化</h3>
+            <p>基于真实高程数据，还原山川起伏。支持卫星影像与户外等高线地图叠加。</p>
+          </div>
+          <div class="language-block" data-lang="en">
+            <h3>3D Terrain Viz</h3>
+            <p>Real elevation data meets satellite imagery. visualize your path with depth.</p>
+          </div>
+          <div class="language-block" data-lang="es">
+            <h3>Visualización del terreno 3D</h3>
+            <p>Los datos de elevación reales se combinan con imágenes de satélite. Visualiza tu camino con profundidad.
+            </p>
+          </div>
+          <div class="language-block" data-lang="fr">
+            <h3>Visualisation du terrain 3D</h3>
+            <p>Les données d'altitude réelles rencontrent l'imagerie satellite. visualisez votre chemin avec profondeur.
+            </p>
+          </div>
+          <div class="language-block" data-lang="de">
+            <h3>3D-Gelände Viz</h3>
+            <p>Echte Höhendaten treffen auf Satellitenbilder. Visualisieren Sie Ihren Weg mit Tiefe.</p>
+          </div>
+          <div class="language-block" data-lang="it">
+            <h3>Visualizzazione del terreno 3D</h3>
+            <p>I dati di elevazione reale incontrano le immagini satellitari. visualizza il tuo percorso con profondità.
+            </p>
+          </div>
+          <div class="language-block" data-lang="pt">
+            <h3>Visualização de terreno 3D</h3>
+            <p>Os dados reais de elevação encontram-se com imagens de satélite. visualize seu caminho com profundidade.
+            </p>
+          </div>
+          <div class="language-block" data-lang="ja">
+            <h3>3D 地形 Viz</h3>
+            <p>実際の標高データと衛星画像が融合します。自分の進む道を奥行きをもって視覚化します。</p>
+          </div>
+          <div class="language-block" data-lang="ko">
+            <h3>3D 지형 시각화</h3>
+            <p>실제 고도 데이터와 위성 이미지가 만났습니다. 당신의 길을 깊이있게 시각화하십시오.</p>
+          </div>
+          <div class="language-block" data-lang="ru">
+            <h3>3D визуализация местности</h3>
+            <p>Реальные данные о высоте соответствуют спутниковым изображениям. визуализируйте свой путь с глубиной.</p>
+          </div>
+          <div class="language-block" data-lang="ar">
+            <h3>3D التضاريس بمعنى</h3>
+            <p>تتوافق بيانات الارتفاع الحقيقية مع صور الأقمار الصناعية. تصور طريقك بعمق.</p>
+          </div>
+          <div class="language-block" data-lang="hi">
+            <h3>3डी भू-भाग अर्थात</h3>
+            <p>वास्तविक उन्नयन डेटा उपग्रह इमेजरी से मिलता है। अपने पथ की गहराई से कल्पना करें।</p>
+          </div>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-icon">📍</div>
+          <div class="language-block is-visible" data-lang="zh">
+            <h3>轨迹故事化</h3>
+            <p>不仅仅是回放。添加关键帧、照片标记和注释，讲述路上的故事。</p>
+          </div>
+          <div class="language-block" data-lang="en">
+            <h3>Route Storytelling</h3>
+            <p>More than playback. Add keyframes, photo markers, and notes to tell the story.</p>
+          </div>
+          <div class="language-block" data-lang="es">
+            <h3>Ruta Cuentacuentos</h3>
+            <p>Más que reproducción. Agregue fotogramas clave, marcadores de fotografías y notas para contar la
+              historia.</p>
+          </div>
+          <div class="language-block" data-lang="fr">
+            <h3>Conte d'itinéraire</h3>
+            <p>Plus que la lecture. Ajoutez des images clés, des marqueurs photo et des notes pour raconter l'histoire.
+            </p>
+          </div>
+          <div class="language-block" data-lang="de">
+            <h3>Routen-Storytelling</h3>
+            <p>Mehr als Wiedergabe. Fügen Sie Keyframes, Fotomarkierungen und Notizen hinzu, um die Geschichte zu
+              erzählen.</p>
+          </div>
+          <div class="language-block" data-lang="it">
+            <h3>Itinerario narrativo</h3>
+            <p>Più che riproduzione. Aggiungi fotogrammi chiave, marcatori fotografici e note per raccontare la storia.
+            </p>
+          </div>
+          <div class="language-block" data-lang="pt">
+            <h3>Roteiro de Contação de Histórias</h3>
+            <p>Mais do que reprodução. Adicione quadros-chave, marcadores de fotos e notas para contar a história.</p>
+          </div>
+          <div class="language-block" data-lang="ja">
+            <h3>ルートストーリーテリング</h3>
+            <p>再生以上のもの。キーフレーム、写真マーカー、メモを追加してストーリーを伝えます。</p>
+          </div>
+          <div class="language-block" data-lang="ko">
+            <h3>루트 스토리텔링</h3>
+            <p>재생 그 이상. 스토리를 전달하려면 키프레임, 사진 마커, 메모를 추가하세요.</p>
+          </div>
+          <div class="language-block" data-lang="ru">
+            <h3>Рассказ о маршруте</h3>
+            <p>Больше, чем воспроизведение. Добавляйте ключевые кадры, фотомаркеры и заметки, чтобы рассказать историю.
+            </p>
+          </div>
+          <div class="language-block" data-lang="ar">
+            <h3>رواية الطريق</h3>
+            <p>أكثر من التشغيل. أضف الإطارات الرئيسية وعلامات الصور والملاحظات لتحكي القصة.</p>
+          </div>
+          <div class="language-block" data-lang="hi">
+            <h3>रूट स्टोरीटेलिंग</h3>
+            <p>प्लेबैक से भी अधिक. कहानी बताने के लिए कीफ़्रेम, फ़ोटो मार्कर और नोट्स जोड़ें।</p>
+          </div>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-icon">🎬</div>
+          <div class="language-block is-visible" data-lang="zh">
+            <h3>电影级运镜</h3>
+            <p>平滑的相机运动插值工具，让你的路线视频像电影一样流畅自然。</p>
+          </div>
+          <div class="language-block" data-lang="en">
+            <h3>Cinematic Camera</h3>
+            <p>Smooth camera interpolation tools make your route videos look like movies.</p>
+          </div>
+          <div class="language-block" data-lang="es">
+            <h3>cámara cinematográfica</h3>
+            <p>Las suaves herramientas de interpolación de cámaras hacen que sus videos de ruta parezcan películas.</p>
+          </div>
+          <div class="language-block" data-lang="fr">
+            <h3>Caméra cinématique</h3>
+            <p>Les outils d'interpolation fluides de la caméra donnent à vos vidéos d'itinéraire l'apparence de films.
+            </p>
+          </div>
+          <div class="language-block" data-lang="de">
+            <h3>Filmkamera</h3>
+            <p>Reibungslose Kamerainterpolationstools lassen Ihre Routenvideos wie Filme aussehen.</p>
+          </div>
+          <div class="language-block" data-lang="it">
+            <h3>Telecamera cinematografica</h3>
+            <p>Gli strumenti di interpolazione della fotocamera fluidi fanno sì che i video del tuo percorso sembrino
+              film.</p>
+          </div>
+          <div class="language-block" data-lang="pt">
+            <h3>Câmera Cinematográfica</h3>
+            <p>Ferramentas suaves de interpolação de câmera fazem com que seus vídeos de rota pareçam filmes.</p>
+          </div>
+          <div class="language-block" data-lang="ja">
+            <h3>映画用カメラ</h3>
+            <p>スムーズなカメラ補間ツールにより、ルートビデオが映画のように見えます。</p>
+          </div>
+          <div class="language-block" data-lang="ko">
+            <h3>시네마틱 카메라</h3>
+            <p>부드러운 카메라 보간 도구를 사용하면 경로 비디오를 영화처럼 보이게 할 수 있습니다.</p>
+          </div>
+          <div class="language-block" data-lang="ru">
+            <h3>Кинематографическая камера</h3>
+            <p>Плавные инструменты интерполяции камеры делают видео маршрутов похожими на фильмы.</p>
+          </div>
+          <div class="language-block" data-lang="ar">
+            <h3>الكاميرا السينمائية</h3>
+            <p>أدوات الاستيفاء السلسة للكاميرا تجعل مقاطع فيديو مسارك تبدو وكأنها أفلام.</p>
+          </div>
+          <div class="language-block" data-lang="hi">
+            <h3>सिनेमाई कैमरा</h3>
+            <p>स्मूथ कैमरा इंटरपोलेशन टूल आपके रूट वीडियो को फिल्मों की तरह बनाते हैं।</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Privacy & Offline Notice -->
+      <section class="section-notice center-text">
+        <div class="language-block is-visible" data-lang="zh">
+          <h2>隐私优先，离线可用</h2>
+          <p>途影是一款本地优先的应用。你的轨迹数据只保存在你的设备上，我们不上传、不收集。支持离线缓存地图，无网环境也能创作。</p>
+        </div>
+        <div class="language-block" data-lang="en">
+          <h2>Privacy First, Offline Ready</h2>
+          <p>TrekReel is local-first. Your tracks stay on your device. We don't collect data. Offline map caching
+            supported.</p>
+        </div>
+        <div class="language-block" data-lang="es">
+          <h2>Privacidad primero, listo sin conexión</h2>
+          <p>TrekReel es local primero. Tus pistas permanecen en tu dispositivo. No recopilamos datos. Almacenamiento en
+            caché de mapas sin conexión
+            apoyado.</p>
+        </div>
+        <div class="language-block" data-lang="fr">
+          <h2>La confidentialité d'abord, prêt hors ligne</h2>
+          <p>TrekReel est une priorité locale. Vos traces restent sur votre appareil. Nous ne collectons pas de données.
+            Mise en cache de la carte hors ligne
+            pris en charge.</p>
+        </div>
+        <div class="language-block" data-lang="de">
+          <h2>Datenschutz geht vor, Offline-fähig</h2>
+          <p>TrekReel ist lokal-zuerst. Ihre Tracks bleiben auf Ihrem Gerät. Wir sammeln keine Daten.
+            Offline-Karten-Caching
+            unterstützt.</p>
+        </div>
+        <div class="language-block" data-lang="it">
+          <h2>La privacy prima di tutto, pronto offline</h2>
+          <p>TrekReel è innanzitutto locale. Le tue tracce rimangono sul tuo dispositivo. Non raccogliamo dati. Caching
+            della mappa offline
+            supportato.</p>
+        </div>
+        <div class="language-block" data-lang="pt">
+          <h2>Privacidade em primeiro lugar, pronto para uso off-line</h2>
+          <p>TrekReel prioriza o local. Suas faixas permanecem no seu dispositivo. Não coletamos dados. Cache de mapa
+            offline
+            suportado.</p>
+        </div>
+        <div class="language-block" data-lang="ja">
+          <h2>プライバシー第一、オフライン対応</h2>
+          <p>TrekReel は地元第一主義です。あなたの足跡はデバイス上に残ります。データは収集しません。オフラインマップのキャッシュ
+            サポートされました。</p>
+        </div>
+        <div class="language-block" data-lang="ko">
+          <h2>개인 정보 보호 우선, 오프라인 준비</h2>
+          <p>TrekReel은 로컬 우선입니다. 귀하의 트랙은 귀하의 장치에 남아 있습니다. 우리는 데이터를 수집하지 않습니다. 오프라인 지도 캐싱
+            지원됩니다.</p>
+        </div>
+        <div class="language-block" data-lang="ru">
+          <h2>Конфиденциальность прежде всего, готовность к работе в автономном режиме</h2>
+          <p>TrekReel ориентирован прежде всего на местное население. Ваши треки остаются на вашем устройстве. Мы не
+            собираем данные. Кэширование офлайн-карт
+            поддерживается.</p>
+        </div>
+        <div class="language-block" data-lang="ar">
+          <h2>الخصوصية أولاً، جاهز للاستخدام دون اتصال بالإنترنت</h2>
+          <p>TrekReel محلي أولاً. تبقى مساراتك على جهازك. نحن لا نجمع البيانات. التخزين المؤقت للخريطة دون اتصال
+            مدعومة.</p>
+        </div>
+        <div class="language-block" data-lang="hi">
+          <h2>गोपनीयता पहले, ऑफ़लाइन तैयार</h2>
+          <p>ट्रेकरील स्थानीय-प्रथम है। आपके ट्रैक आपके डिवाइस पर बने रहते हैं. हम डेटा एकत्र नहीं करते. ऑफ़लाइन
+            मानचित्र कैशिंग
+            समर्थित.</p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- More Projects Section -->
+    <section class="more-projects">
+      <div class="section-title center-text">
+        <div class="language-block is-visible" data-lang="zh">
+          <h2>更多作品</h2>
+          <p>来自同一开发者的其他创意工具</p>
+        </div>
+        <div class="language-block" data-lang="en">
+          <h2>More Projects</h2>
+          <p>Other creative tools from the same developer</p>
+        </div>
+        <div class="language-block" data-lang="es">
+          <h2>Más proyectos</h2>
+          <p>Otras herramientas creativas del mismo desarrollador</p>
+        </div>
+        <div class="language-block" data-lang="fr">
+          <h2>Plus de projets</h2>
+          <p>Autres outils créatifs du même développeur</p>
+        </div>
+        <div class="language-block" data-lang="de">
+          <h2>Weitere Projekte</h2>
+          <p>Andere kreative Tools vom gleichen Entwickler</p>
+        </div>
+        <div class="language-block" data-lang="it">
+          <h2>Altri progetti</h2>
+          <p>Altri strumenti creativi dello stesso sviluppatore</p>
+        </div>
+        <div class="language-block" data-lang="pt">
+          <h2>Mais projetos</h2>
+          <p>Outras ferramentas criativas do mesmo desenvolvedor</p>
+        </div>
+        <div class="language-block" data-lang="ja">
+          <h2>他のプロジェクト</h2>
+          <p>同じ開発者の他のクリエイティブ ツール</p>
+        </div>
+        <div class="language-block" data-lang="ko">
+          <h2>더 많은 프로젝트</h2>
+          <p>동일한 개발자가 만든 다른 창의적인 도구</p>
+        </div>
+        <div class="language-block" data-lang="ru">
+          <h2>Больше проектов</h2>
+          <p>Другие инструменты для творчества от того же разработчика</p>
+        </div>
+        <div class="language-block" data-lang="ar">
+          <h2>المزيد من المشاريع</h2>
+          <p>أدوات إبداعية أخرى من نفس المطور</p>
+        </div>
+        <div class="language-block" data-lang="hi">
+          <h2>अधिक परियोजनाएँ</h2>
+          <p>उसी डेवलपर के अन्य रचनात्मक उपकरण</p>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <a href="https://hooosberg.github.io/WitNote/" target="_blank" class="project-item">
+          <img src="./img/witnote.png" alt="WitNote Logo" class="project-icon">
+          <span class="project-name">WitNote</span>
+        </a>
+
+        <a href="https://hooosberg.github.io/GlotShot/" target="_blank" class="project-item">
+          <img src="./img/glotshot.png" alt="GlotShot Logo" class="project-icon">
+          <span class="project-name">GlotShot</span>
+        </a>
+
+        <a href="https://uixskills.com/" target="_blank" class="project-item">
+          <img src="./img/uixskills.png" alt="UIX Skills Logo" class="project-icon">
+          <span class="project-name">UIX Skills</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>
+            <span class="language-block is-visible" data-lang="zh">途影 TrekReel</span>
+            <span class="language-block" data-lang="en">TrekReel</span>
+            <span class="language-block" data-lang="es">TrekReel</span>
+            <span class="language-block" data-lang="fr">TrekReel</span>
+            <span class="language-block" data-lang="de">TrekReel</span>
+            <span class="language-block" data-lang="it">TrekReel</span>
+            <span class="language-block" data-lang="pt">TrekReel</span>
+            <span class="language-block" data-lang="ja">トレックリール</span>
+            <span class="language-block" data-lang="ko">트렉릴</span>
+            <span class="language-block" data-lang="ru">ТрекРил</span>
+            <span class="language-block" data-lang="ar">تريكريل</span>
+            <span class="language-block" data-lang="hi">ट्रेकरील</span>
+          </h4>
+          <a href="./index.html">
+            <span class="language-block is-visible" data-lang="zh">首页</span>
+            <span class="language-block" data-lang="en">Home</span>
+            <span class="language-block" data-lang="es">Inicio</span>
+            <span class="language-block" data-lang="fr">Accueil</span>
+            <span class="language-block" data-lang="de">Zuhause</span>
+            <span class="language-block" data-lang="it">Casa</span>
+            <span class="language-block" data-lang="pt">Página inicial</span>
+            <span class="language-block" data-lang="ja">ホーム</span>
+            <span class="language-block" data-lang="ko">홈</span>
+            <span class="language-block" data-lang="ru">Главная</span>
+            <span class="language-block" data-lang="ar">الصفحة الرئيسية</span>
+            <span class="language-block" data-lang="hi">घर</span>
+          </a>
+          <a href="./support.html">
+            <span class="language-block is-visible" data-lang="zh">支持中心</span>
+            <span class="language-block" data-lang="en">Support</span>
+            <span class="language-block" data-lang="es">Soporte</span>
+            <span class="language-block" data-lang="fr">Assistance</span>
+            <span class="language-block" data-lang="de">Unterstützung</span>
+            <span class="language-block" data-lang="it">Supporto</span>
+            <span class="language-block" data-lang="pt">Suporte</span>
+            <span class="language-block" data-lang="ja">サポート</span>
+            <span class="language-block" data-lang="ko">지원</span>
+            <span class="language-block" data-lang="ru">Поддержка</span>
+            <span class="language-block" data-lang="ar">الدعم</span>
+            <span class="language-block" data-lang="hi">समर्थन</span>
+          </a>
+        </div>
+        <div class="footer-section">
+          <h4>
+            <span class="language-block is-visible" data-lang="zh">联系我们</span>
+            <span class="language-block" data-lang="en">Connect</span>
+            <span class="language-block" data-lang="es">Conectar</span>
+            <span class="language-block" data-lang="fr">Se connecter</span>
+            <span class="language-block" data-lang="de">Verbinden</span>
+            <span class="language-block" data-lang="it">Connettiti</span>
+            <span class="language-block" data-lang="pt">Conectar</span>
+            <span class="language-block" data-lang="ja">接続する</span>
+            <span class="language-block" data-lang="ko">연결하다</span>
+            <span class="language-block" data-lang="ru">Подключиться</span>
+            <span class="language-block" data-lang="ar">الاتصال</span>
+            <span class="language-block" data-lang="hi">कनेक्ट करें</span>
+          </h4>
+          <a href="mailto:zikedece@proton.me">Email</a>
+          <a href="https://github.com/hooosberg/TrekReel" target="_blank" rel="noreferrer noopener">GitHub</a>
+        </div>
+        <div class="footer-section">
+          <h4>
+            <span class="language-block is-visible" data-lang="zh">法律信息</span>
+            <span class="language-block" data-lang="en">Legal</span>
+            <span class="language-block" data-lang="es">Legales</span>
+            <span class="language-block" data-lang="fr">Juridique</span>
+            <span class="language-block" data-lang="de">Legal</span>
+            <span class="language-block" data-lang="it">Legale</span>
+            <span class="language-block" data-lang="pt">Jurídico</span>
+            <span class="language-block" data-lang="ja">法的</span>
+            <span class="language-block" data-lang="ko">법적</span>
+            <span class="language-block" data-lang="ru">Юридический</span>
+            <span class="language-block" data-lang="ar">قانوني</span>
+            <span class="language-block" data-lang="hi">कानूनी</span>
+          </h4>
+          <a href="./privacy.html">
+            <span class="language-block is-visible" data-lang="zh">隐私政策</span>
+            <span class="language-block" data-lang="en">Privacy Policy</span>
+            <span class="language-block" data-lang="es">Política de privacidad</span>
+            <span class="language-block" data-lang="fr">Politique de confidentialité</span>
+            <span class="language-block" data-lang="de">Datenschutzrichtlinie</span>
+            <span class="language-block" data-lang="it">Informativa sulla privacy</span>
+            <span class="language-block" data-lang="pt">Política de Privacidade</span>
+            <span class="language-block" data-lang="ja">プライバシーポリシー</span>
+            <span class="language-block" data-lang="ko">개인 정보 보호 정책</span>
+            <span class="language-block" data-lang="ru">Политика конфиденциальности</span>
+            <span class="language-block" data-lang="ar">سياسة الخصوصية</span>
+            <span class="language-block" data-lang="hi">गोपनीयता नीति</span>
+          </a>
+          <a href="./terms.html">
+            <span class="language-block is-visible" data-lang="zh">服务条款</span>
+            <span class="language-block" data-lang="en">Terms of Service</span>
+            <span class="language-block" data-lang="es">Términos de servicio</span>
+            <span class="language-block" data-lang="fr">Conditions d'utilisation</span>
+            <span class="language-block" data-lang="de">Nutzungsbedingungen</span>
+            <span class="language-block" data-lang="it">Termini di servizio</span>
+            <span class="language-block" data-lang="pt">Termos de Serviço</span>
+            <span class="language-block" data-lang="ja">利用規約</span>
+            <span class="language-block" data-lang="ko">서비스 약관</span>
+            <span class="language-block" data-lang="ru">Условия использования</span>
+            <span class="language-block" data-lang="ar">شروط الخدمة</span>
+            <span class="language-block" data-lang="hi">सेवा की शर्तें</span>
+          </a>
+          <a href="./sources.html">
+            <span class="language-block is-visible" data-lang="zh">数据源致谢</span>
+            <span class="language-block" data-lang="en">Credits</span>
+            <span class="language-block" data-lang="es">Créditos</span>
+            <span class="language-block" data-lang="fr">Crédits</span>
+            <span class="language-block" data-lang="de">Credits</span>
+            <span class="language-block" data-lang="it">Crediti</span>
+            <span class="language-block" data-lang="pt">Créditos</span>
+            <span class="language-block" data-lang="ja">クレジット</span>
+            <span class="language-block" data-lang="ko">크레딧</span>
+            <span class="language-block" data-lang="ru">Кредиты</span>
+            <span class="language-block" data-lang="ar">الاعتمادات</span>
+            <span class="language-block" data-lang="hi">श्रेय</span>
+          </a>
+        </div>
+      </div>
+      <div class="copyright">© 2026 TrekReel. All rights reserved.</div>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
