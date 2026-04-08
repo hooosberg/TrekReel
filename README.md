@@ -5,7 +5,8 @@
 <h1 align="center">TrekReel | 途影</h1>
 
 <p align="center">
-  <strong>Turn Every Outdoor Route Into a Shareable 3D Story</strong>
+  <strong>Turn Every Outdoor Route Into a Shareable 3D Story</strong><br>
+  Local-first 3D storytelling for hikers, cyclists, runners, and route planners.
 </p>
 
 <p align="center">
@@ -18,26 +19,75 @@
 </p>
 
 <p align="center">
-  Full-featured Mac App Store edition for macOS. Community DMG and Windows builds will be published through GitHub Releases.
+  <a href="https://hooosberg.github.io/TrekReel/">
+    <img src="https://img.shields.io/badge/Website-TrekReel-0a66c2?style=flat-square" alt="Website">
+  </a>
+  <a href="https://github.com/hooosberg/TrekReel/releases">
+    <img src="https://img.shields.io/github/v/release/hooosberg/TrekReel?style=flat-square" alt="Release">
+  </a>
+  <a href="https://github.com/hooosberg/TrekReel/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/hooosberg/TrekReel?style=flat-square" alt="License">
+  </a>
+  <img src="https://img.shields.io/badge/Platform-macOS%20%7C%20Windows-111111?style=flat-square" alt="Platform">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/GPS-GPX%20%7C%20KML%20%7C%20KMZ-2ea44f?style=flat-square" alt="Supported GPS Formats">
+  <img src="https://img.shields.io/badge/Community%20Export-720p%20Video%20%7C%20Basic%20Image-007aff?style=flat-square" alt="Community export surface">
+</p>
+
+<p align="center">
+  <strong>
+    <a href="./README.md">English</a> &nbsp;|&nbsp;
+    <a href="./readme-locales/pages/README.zh-CN.md">中文 (Simplified Chinese)</a> &nbsp;|&nbsp;
+    <a href="./readme-locales/pages/README.es-ES.md">Español</a> &nbsp;|&nbsp;
+    <a href="./readme-locales/pages/README.fr-FR.md">Français</a> &nbsp;|&nbsp;
+    <a href="./readme-locales/pages/README.de-DE.md">Deutsch</a> &nbsp;|&nbsp;
+    <a href="./readme-locales/pages/README.it-IT.md">Italiano</a> &nbsp;|&nbsp;
+    <a href="./readme-locales/pages/README.pt-BR.md">Português (Brasil)</a> &nbsp;|&nbsp;
+    <a href="./readme-locales/pages/README.ja-JP.md">日本語</a> &nbsp;|&nbsp;
+    <a href="./readme-locales/pages/README.ko-KR.md">한국어</a> &nbsp;|&nbsp;
+    <a href="./readme-locales/pages/README.ru-RU.md">Русский</a> &nbsp;|&nbsp;
+    <a href="./readme-locales/pages/README.ar-SA.md">العربية</a> &nbsp;|&nbsp;
+    <a href="./readme-locales/pages/README.hi-IN.md">हिन्दी</a>
+  </strong>
 </p>
 
 ---
 
 ## About
 
-**TrekReel** turns GPX tracks into cinematic 3D route videos, printable terrain models, and presentation-ready map exports. It is built for hikers, cyclists, runners, sailors, and anyone who wants to tell the story behind a route.
+**TrekReel** is a local-first 3D storytelling app that turns outdoor routes into cinematic map videos, presentation-ready visuals, and terrain-based stories without sending your data to the cloud.
 
-## Distribution
+## Editions
 
-- **Mac App Store**: the commercial edition with the fullest feature set.
-- **GitHub Releases**: lighter public builds for `DMG` and `EXE`, without the purchase wall and with a reduced feature surface.
+- **Mac App Store**: the full commercial edition for macOS, with the broadest export surface.
+- **GitHub Community Builds**: public `DMG` and `EXE` downloads with the purchase wall removed and a lighter feature surface.
 
 ## Highlights
 
-- Import `GPX`, `KML`, and `KMZ` tracks from tools like Strava, Garmin, and Apple Watch.
-- Generate 3D terrain flyover videos for sharing on social platforms.
-- Export terrain data as `STL`, `OBJ`, and high-quality map imagery.
-- Keep route data local on your device instead of uploading it to the cloud.
+### 1. Fast Route Visualization
+
+Import `GPX`, `KML`, or `KMZ` tracks and generate a 3D terrain scene quickly for hiking plans, ride recaps, and outdoor storytelling.
+
+![Route Animation](./img/feature_route.png)
+
+### 2. Clear Terrain Context
+
+Add markers and route annotations with terrain context so camps, water points, scenic stops, and hazards are easier to explain.
+
+![Rich Annotations](./img/feature_marker.png)
+
+## Key Features
+
+| Feature | Description |
+| --- | --- |
+| Import Tracks | Drag and drop `GPX`, `KML`, and `KMZ` files |
+| 3D Terrain | Real elevation data with satellite and outdoor map overlays |
+| Storytelling Tools | Camera motion, annotations, and presentation-friendly scenes |
+| Local Workflow | Route data stays on your device |
+| Community Export | Basic image export and `720p` video export |
+| Commercial Edition | Mac App Store version keeps the fuller export workflow |
 
 ## Resources
 
@@ -45,8 +95,36 @@
 - **Support**: [Support Center](https://hooosberg.github.io/TrekReel/support.html)
 - **Privacy**: [Privacy Policy](https://hooosberg.github.io/TrekReel/privacy.html)
 - **Terms**: [Terms of Service](https://hooosberg.github.io/TrekReel/terms.html)
+- **Sources**: [Data Source Credits](https://hooosberg.github.io/TrekReel/sources.html)
 
 ## Contact
 
 - **GitHub**: [hooosberg/TrekReel](https://github.com/hooosberg/TrekReel)
 - **Email**: [zikedece@proton.me](mailto:zikedece@proton.me)
+
+## More Projects
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://hooosberg.github.io/WitNote/">
+        <img src="./img/witnote.png" width="80" alt="WitNote"><br>
+        <b>WitNote</b>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://hooosberg.github.io/GlotShot/">
+        <img src="./img/glotshot.png" width="80" alt="GlotShot"><br>
+        <b>GlotShot</b>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://uixskills.com/">
+        <img src="./img/uixskills.png" width="80" alt="UIX Skills"><br>
+        <b>UIX Skills</b>
+      </a>
+    </td>
+  </tr>
+</table>
+
+Copyright © 2026 TrekReel. All rights reserved.
