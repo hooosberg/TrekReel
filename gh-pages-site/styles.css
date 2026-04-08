@@ -186,6 +186,7 @@ a:hover {
   display: flex;
   gap: 16px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -202,6 +203,7 @@ a:hover {
 .btn-large {
   padding: 14px 32px;
   font-size: 17px;
+  min-width: 220px;
 }
 
 .btn-primary {
@@ -224,6 +226,30 @@ a:hover {
   opacity: 1;
 }
 
+.btn-store {
+  background: #111111;
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(17, 17, 17, 0.18);
+}
+
+.btn-store:hover {
+  background: #000000;
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.btn-release {
+  background: #24292f;
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(36, 41, 47, 0.16);
+}
+
+.btn-release:hover {
+  background: #1b1f23;
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
 .btn-disabled {
   opacity: 0.6 !important;
   cursor: not-allowed !important;
@@ -238,6 +264,19 @@ a:hover {
   margin-left: 8px;
   font-weight: 400;
   vertical-align: middle;
+}
+
+.hero-support-link {
+  display: inline-flex;
+  margin-top: 18px;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.hero-support-link:hover {
+  color: var(--text-primary);
+  opacity: 1;
 }
 
 /* Carousel */
@@ -358,6 +397,19 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+  }
+
+  .btn-large {
+    width: 100%;
+    min-width: 0;
+  }
+
   .hero-carousel-container {
     aspect-ratio: 4 / 3;
   }
