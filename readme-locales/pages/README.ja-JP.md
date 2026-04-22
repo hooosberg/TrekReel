@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../img/logo.png" alt="TrekReel Logo" width="120" height="120">
+  <img src="../../img/logo-128.png" alt="TrekReel Logo" width="120" height="120">
 </p>
 
 <h1 align="center">TrekReel | トレックリール</h1>
@@ -55,12 +55,12 @@
 #### 1. 地図のようなシンプルな PPT
 GPX から 3D 地形を自動生成します。ルートを手動で描画するか、インポートして計画を即座に視覚化します。
 
-![Route Animation](../../img/feature_route.png)
+![Route Animation](../../img/feature_route.jpg)
 
 #### 2. 豊富な注釈
 重要な場所にマーカーを追加します。地形のコンテキストを使用してキャンプ、水源、リスクを視覚化します。
 
-![Rich Annotations](../../img/feature_marker.png)
+![Rich Annotations](../../img/feature_marker.jpg)
 
 ### 🚀 Features
 
@@ -98,7 +98,7 @@ GPX から 3D 地形を自動生成します。ルートを手動で描画する
     </td>
     <td align="center">
       <a href="https://hooosberg.github.io/GlotShot/">
-        <img src="../../img/glotshot.png" width="80" alt="GlotShot"><br>
+        <img src="../../img/glotshot-128.png" width="80" alt="GlotShot"><br>
         <b>GlotShot</b>
       </a>
     </td>

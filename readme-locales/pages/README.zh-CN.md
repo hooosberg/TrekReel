@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../img/logo.png" alt="TrekReel Logo" width="120" height="120">
+  <img src="../../img/logo-128.png" alt="TrekReel Logo" width="120" height="120">
 </p>
 
 <h1 align="center">TrekReel | 途影</h1>
@@ -55,12 +55,12 @@
 #### 1. 像地图 PPT 一样简单
 无需复杂操作，导入 GPX 自动生成三维地形。支持框选或手绘路线，快速呈现户外规划。
 
-![Route Animation](../../img/feature_route.png)
+![Route Animation](../../img/feature_route.jpg)
 
 #### 2. 丰富的信息标注
 在关键位置添加标记与注释。结合地形起伏，直观展示营地、水源与风险点。
 
-![Rich Annotations](../../img/feature_marker.png)
+![Rich Annotations](../../img/feature_marker.jpg)
 
 ### 🚀 主要功能
 
@@ -100,7 +100,7 @@
     </td>
     <td align="center">
       <a href="https://hooosberg.github.io/GlotShot/">
-        <img src="../../img/glotshot.png" width="80" alt="GlotShot"><br>
+        <img src="../../img/glotshot-128.png" width="80" alt="GlotShot"><br>
         <b>GlotShot</b>
       </a>
     </td>

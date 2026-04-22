@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../img/logo.png" alt="TrekReel Logo" width="120" height="120">
+  <img src="../../img/logo-128.png" alt="TrekReel Logo" width="120" height="120">
 </p>
 
 <h1 align="center">TrekReel | تريكريل</h1>
@@ -55,12 +55,12 @@
 #### 1. بسيطة مثل خريطة PPT
 إنشاء تضاريس ثلاثية الأبعاد تلقائيًا من GPX. ارسم المسارات يدويًا أو قم باستيرادها لتصور الخطط على الفور.
 
-![Route Animation](../../img/feature_route.png)
+![Route Animation](../../img/feature_route.jpg)
 
 #### 2. التعليقات التوضيحية الغنية
 أضف علامات في النقاط الرئيسية. تصور المخيمات ومصادر المياه والمخاطر مع سياق التضاريس.
 
-![Rich Annotations](../../img/feature_marker.png)
+![Rich Annotations](../../img/feature_marker.jpg)
 
 ### 🚀 Features
 
@@ -98,7 +98,7 @@
     </td>
     <td align="center">
       <a href="https://hooosberg.github.io/GlotShot/">
-        <img src="../../img/glotshot.png" width="80" alt="GlotShot"><br>
+        <img src="../../img/glotshot-128.png" width="80" alt="GlotShot"><br>
         <b>GlotShot</b>
       </a>
     </td>

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../img/logo.png" alt="TrekReel Logo" width="120" height="120">
+  <img src="../../img/logo-128.png" alt="TrekReel Logo" width="120" height="120">
 </p>
 
 <h1 align="center">TrekReel | ट्रेकरील</h1>
@@ -55,12 +55,12 @@
 #### 1. मानचित्र पीपीटी जितना सरल
 जीपीएक्स से 3डी भूभाग स्वतः उत्पन्न करें। योजनाओं को तुरंत देखने के लिए मैन्युअल रूप से मार्ग बनाएं या आयात करें।
 
-![Route Animation](../../img/feature_route.png)
+![Route Animation](../../img/feature_route.jpg)
 
 #### 2. Rich Annotations
 
 
-![Rich Annotations](../../img/feature_marker.png)
+![Rich Annotations](../../img/feature_marker.jpg)
 
 ### 🚀 Features
 
@@ -98,7 +98,7 @@
     </td>
     <td align="center">
       <a href="https://hooosberg.github.io/GlotShot/">
-        <img src="../../img/glotshot.png" width="80" alt="GlotShot"><br>
+        <img src="../../img/glotshot-128.png" width="80" alt="GlotShot"><br>
         <b>GlotShot</b>
       </a>
     </td>

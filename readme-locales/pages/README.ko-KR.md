@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../img/logo.png" alt="TrekReel Logo" width="120" height="120">
+  <img src="../../img/logo-128.png" alt="TrekReel Logo" width="120" height="120">
 </p>
 
 <h1 align="center">TrekReel | 트렉릴</h1>
@@ -55,12 +55,12 @@
 #### 1. 지도처럼 간단한 PPT
 GPX에서 3D 지형을 자동 생성합니다. 경로를 수동으로 그리거나 가져와서 즉시 계획을 시각화할 수 있습니다.
 
-![Route Animation](../../img/feature_route.png)
+![Route Animation](../../img/feature_route.jpg)
 
 #### 2. 풍부한 주석
 주요 지점에 마커를 추가하세요. 지형 상황에 따라 캠프, 수자원 및 위험을 시각화합니다.
 
-![Rich Annotations](../../img/feature_marker.png)
+![Rich Annotations](../../img/feature_marker.jpg)
 
 ### 🚀 Features
 
@@ -98,7 +98,7 @@ GPX에서 3D 지형을 자동 생성합니다. 경로를 수동으로 그리거�
     </td>
     <td align="center">
       <a href="https://hooosberg.github.io/GlotShot/">
-        <img src="../../img/glotshot.png" width="80" alt="GlotShot"><br>
+        <img src="../../img/glotshot-128.png" width="80" alt="GlotShot"><br>
         <b>GlotShot</b>
       </a>
     </td>

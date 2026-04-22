@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../img/logo.png" alt="TrekReel Logo" width="120" height="120">
+  <img src="../../img/logo-128.png" alt="TrekReel Logo" width="120" height="120">
 </p>
 
 <h1 align="center">TrekReel</h1>
@@ -55,12 +55,12 @@ Costruito per escursionisti, corridori e ciclisti. Importa GPX, crea istantaneam
 #### 1. Semplice come una mappa PPT
 Genera automaticamente terreno 3D da GPX. Disegna manualmente i percorsi o importali per visualizzare immediatamente i piani.
 
-![Route Animation](../../img/feature_route.png)
+![Route Animation](../../img/feature_route.jpg)
 
 #### 2. Annotazioni ricche
 Aggiungi marcatori nei punti chiave. Visualizza accampamenti, fonti d'acqua e rischi con il contesto del terreno.
 
-![Rich Annotations](../../img/feature_marker.png)
+![Rich Annotations](../../img/feature_marker.jpg)
 
 ### 🚀 Features
 
@@ -98,7 +98,7 @@ Aggiungi marcatori nei punti chiave. Visualizza accampamenti, fonti d'acqua e ri
     </td>
     <td align="center">
       <a href="https://hooosberg.github.io/GlotShot/">
-        <img src="../../img/glotshot.png" width="80" alt="GlotShot"><br>
+        <img src="../../img/glotshot-128.png" width="80" alt="GlotShot"><br>
         <b>GlotShot</b>
       </a>
     </td>

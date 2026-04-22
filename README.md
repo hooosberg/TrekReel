@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./img/logo.png" alt="TrekReel Logo" width="120" height="120">
+  <img src="./img/logo-128.png" alt="TrekReel Logo" width="120" height="120">
 </p>
 
 <h1 align="center">TrekReel | 途影</h1>
@@ -70,13 +70,13 @@
 
 Import `GPX`, `KML`, or `KMZ` tracks and generate a 3D terrain scene quickly for hiking plans, ride recaps, and outdoor storytelling.
 
-![Route Animation](./img/feature_route.png)
+![Route Animation](./img/feature_route.jpg)
 
 ### 2. Clear Terrain Context
 
 Add markers and route annotations with terrain context so camps, water points, scenic stops, and hazards are easier to explain.
 
-![Rich Annotations](./img/feature_marker.png)
+![Rich Annotations](./img/feature_marker.jpg)
 
 ## Key Features
 
