@@ -102,29 +102,16 @@ Add markers and route annotations with terrain context so camps, water points, s
 - **GitHub**: [hooosberg/TrekReel](https://github.com/hooosberg/TrekReel)
 - **Email**: [zikedece@proton.me](mailto:zikedece@proton.me)
 
-## More Projects
+## Sibling projects
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://hooosberg.github.io/WitNote/">
-        <img src="./img/witnote.png" width="80" alt="WitNote"><br>
-        <b>WitNote</b>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://hooosberg.github.io/GlotShot/">
-        <img src="./img/glotshot.png" width="80" alt="GlotShot"><br>
-        <b>GlotShot</b>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://uixskills.com/">
-        <img src="./img/uixskills.png" width="80" alt="UIX Skills"><br>
-        <b>UIX Skills</b>
-      </a>
-    </td>
-  </tr>
-</table>
+Built by [hooosberg](https://github.com/hooosberg):
+
+- [AgentLimb](https://agentlimb.com) — teach AI to control your browser
+- [BeRaw](https://hooosberg.github.io/BeRaw/) — Behance raw-image grabber
+- [Packpour](https://hooosberg.github.io/Packpour/) — App Store Connect locale filler
+- [WitNote](https://hooosberg.github.io/WitNote/) — local-first AI writing companion
+- [GlotShot](https://hooosberg.github.io/GlotShot/) — perfect App Store preview images
+- [DOMPrompter](https://hooosberg.github.io/DOMPrompter/) — visualize DOM for AI code
+- [UIXskills](https://uixskills.com) — AI → JSON → Whiteboard → UI
 
 Copyright © 2026 TrekReel. All rights reserved.
