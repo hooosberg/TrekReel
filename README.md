@@ -19,9 +19,10 @@ Install directly from the **Mac App Store**:
 
 macOS Pro upgrades are handled natively through Apple StoreKit In-App Purchase.
 
-### Windows 10 / 11 (x64 Standalone Edition)
-Download the latest Windows installer from GitHub Releases:
-- **Direct Installer (`TrekReel-Setup-1.0.6-x64.exe`):** https://github.com/hooosberg/TrekReel/releases/latest/download/TrekReel-Setup-1.0.6-x64.exe
+### Windows 10 / 11 (x64 & ARM64 Standalone Editions)
+Choose the installer that matches your Windows processor architecture from GitHub Releases:
+- **Windows x64 (Intel / AMD — Recommended for most PCs):** [`TrekReel-Setup-1.0.6-x64.exe`](https://github.com/hooosberg/TrekReel/releases/latest/download/TrekReel-Setup-1.0.6-x64.exe)
+- **Windows ARM64 (Snapdragon / Surface ARM / Mac Windows VMs):** [`TrekReel-Setup-1.0.6-arm64.exe`](https://github.com/hooosberg/TrekReel/releases/latest/download/TrekReel-Setup-1.0.6-arm64.exe)
 - **All Releases & Checksums (`SHA256SUMS.txt`):** https://github.com/hooosberg/TrekReel/releases
 
 > **Windows SmartScreen Notice**
